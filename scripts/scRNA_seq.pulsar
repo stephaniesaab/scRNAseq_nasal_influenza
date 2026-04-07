@@ -1,0 +1,26 @@
+#Single Cell RNA Seq
+
+#Login to canada compute
+ssh ssaab@narval.computecanada.ca
+
+#Get RDS object
+mkdir data
+cd data
+wget https://aacgenomicspublic.blob.core.windows.net/public/seurat_ass4.rds
+
+#Add .rds file to .gitignore
+
+#Open SALLOC
+salloc --time=2:00:00 --ntasks=1 --cpus-per-task=4 --mem=32G --account=def-itobias
+
+#Check R module
+module spider r #-> 4.5.0
+module spider r-bundle-bioconductor
+
+ #Checks the ones that work with the already loaded R version
+module avail r-bundle-bioconductor
+#Pre-built in Narval cluster
+module load r-bundle-bioconductor/3.21
+
+#See package list
+module show r-bundle-bioconductor/3.21

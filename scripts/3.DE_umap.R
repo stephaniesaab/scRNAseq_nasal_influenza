@@ -1,4 +1,4 @@
-#scRNAseq Making UMAP, clustering, and annotations
+#3. DE and UMAP Clustering again
 
 #Load libraries ====
 library(dplyr)
@@ -7,56 +7,26 @@ library(ggplot2)
 library(sctransform)
 library(future)
 
-#Increase memory for Cell object
-options(future.globals.maxSize = 15 * 1024^3)
-plan("multisession", workers = 8)
+#Load data ====
+srt_rds <- readRDS("../data/seurat_processed.rds")
 
-#Load RDS object 
-seurat_rds <- readRDS("../data/seurat_filtered.rds")
-seurat_rds #24386 features across 154343 samples
+#Run PCA -> Returns Seurat object with PCA calculation stored in reductions slot
+srt_rds <- RunPCA(srt_rds, 
+                  assay = "SCT", #Assat PCA is run on is SCTransform
+                  npcs = 16, #As per elbow plot (Bend around 16PCs)
+                  verbose = TRUE, #Print the top genes associated with high/low loadings for the PCs
+                  seed.use= 42, #Set seed to 42, default
+                  )
 
-
-#Normalization of data and scaling with SCTransform() -> Replaces NormalizeData(), FindVariableFeatures(), ScaleData(), calculates Pearson Residuals
-seurat_rds <- SCTransform(seurat_rds, 
-                          vars.to.regress = "mitoRatio",
-                          vst.flavor = "v2",
-                          verbose = TRUE)
-
-#Dimensionality reduction by PCA and UMAP embedding
-#Standard steps in the Seurat workflow for visualization and clustering
-#Identifies eigenvectors that explain the most variation in the data
-seurat_rds <- RunPCA(seurat_rds, features = VariableFeatures(object = seurat_rds), verbose = FALSE)
-
-#How many PCs to use for clustering with elbow plot
-pdf("../plots/elbow_plot.pdf")
-ElbowPlot(seurat_rds)
-dev.off()
-
-#UMAP
-#20-30 PCs starting point
-seurat_rds <- FindNeighbors(seurat_rds, dims = 1:30)
-seurat_rds <- FindClusters(seurat_rds, resolution = 0.5)
-seurat_rds <- RunUMAP(seurat_rds, dims = 1:30)
-
-#Save the UMAP
-pdf("../plots/umap_clusters.pdf")
-print(DimPlot(seurat_rds, reduction = "umap", label = TRUE))
-dev.off()
-
-#Save final processed object
-saveRDS(seurat_rds, "../data/seurat_processed.rds")
+#Clustering 
+#Find neighbors / Find clusters
+#RunUMAP
 
 # ====================== 
-# # By default Seurat only scales variable features. Here, we're instead scaling all features (better downstream visualization)
+
 # # The scaling phase is also where we would regress out unwanted sources of variation, e.g. cell cycle stage
 # all.genes <- rownames(pbmc)
 # pbmc <- ScaleData(pbmc, features = all.genes)
-# 
-# # We run a PCA to produce principal components that can be used to cluster our cells
-# pbmc <- RunPCA(pbmc, features = VariableFeatures(object = pbmc))
-# 
-# # Determine the ‘dimensionality’ of the dataset -> Pick some principle components to use for the rest of the script
-# ElbowPlot(pbmc)
 # 
 # # Clustering
 # pbmc <- FindNeighbors(pbmc, dims = 1:17) #Set cutoff as 17 PCs

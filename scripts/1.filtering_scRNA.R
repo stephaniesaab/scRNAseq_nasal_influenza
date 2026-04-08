@@ -5,8 +5,11 @@ library(dplyr)
 library(Seurat)
 library(ggplot2)
 
-seurat_obj <- readRDS("seurat_ass4.rds")
+seurat_obj <- readRDS("../data/seurat_ass4.rds")
 
+# Create output directories if they don't exist
+if(!dir.exists("../plots")) dir.create("../plots", recursive = TRUE)
+if(!dir.exists("../data")) dir.create("../data", recursive = TRUE)
 
 #Get Mitochondrial Percentage
 # Mouse gene symbols use "mt-", human use "MT-"
@@ -25,6 +28,7 @@ metadata <- seurat_obj@meta.data
 #Visualize the number of cell counts per sample
 #Can get multiple cellular barcodes per hydrogen droplet, depending on protocol
 #Can get a higher number of cell barcodes than cells (also account for dying cells)
+pdf("../plots/qc_numcells.pdf")
 metadata %>%
   ggplot(aes(x = biosample_id, fill = organ_custom))+
   geom_bar() +
@@ -32,11 +36,13 @@ metadata %>%
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
   theme(plot.title = element_text(hjust = 0.5, face = "bold")) +
   ggtitle("NumCells")
+dev.off()
 #Way more cells in OM and RM organs than LNG
 #Probably have some junk cells
 
 
 #UMI counts per cell
+pdf("../plots/qc_UMI_per_cell.pdf")
 metadata %>%
   ggplot(aes(color = biosample_id, x = nCount_RNA, fill = organ_custom))+
   geom_density(alpha = 0.2) +
@@ -44,15 +50,18 @@ metadata %>%
   theme_classic() +
   ylab("Cell density") +
   geom_vline(xintercept = 500)
+dev.off()
 #All are 3000 or above -> good
 
 #Genes detected per cell
+pdf("../plots/qc_genes_per_cell.pdf")
 metadata %>%
   ggplot(aes(color=orig.ident, x=nFeature_RNA, fill= organ_custom)) +
   geom_density(alpha = 0.2) +
   theme_classic() +
   scale_x_log10() +
   geom_vline(xintercept = 300)
+dev.off()
 #Bimodal -> One really high peak for D05OM?
 
 #Complexity
@@ -65,11 +74,13 @@ metadata %>%
 seurat_obj$log10GenesPerUMI <- log10(seurat_obj$nFeature_RNA) / log10(seurat_obj$nCount_RNA)
 metadata$log10GenesPerUMI <- seurat_obj$log10GenesPerUMI
 
+pdf("../plots/qc_log10genesperUMI.pdf")
 metadata %>%
   ggplot(aes(x = log10GenesPerUMI, color = organ_custom, fill = orig.ident)) +
   geom_density(alpha = 0.2) +
   theme_classic() +
   geom_vline(xintercept = 0.8)
+dev.off()
 #Almost all are above 0.8 -> Good
 
 #Mitochondrial counts ratio
@@ -80,12 +91,14 @@ seurat_obj$mitoRatio <- PercentageFeatureSet(object = seurat_obj, pattern = "^mt
 metadata$mitoRatio <- seurat_obj$mitoRatio / 100
 
 #Plot mtcounts, removed 89 rows becase out of range for log10 scale
+pdf("../plots/qc_plot_counts.pdf")
 metadata %>%
   ggplot(aes(fill = orig.ident, x = mitoRatio, color = organ_custom)) +
   geom_density(alpha = 0.2) +
   scale_x_log10() +
   theme_classic() +
   geom_vline(xintercept = 0.2)
+dev.off()
 #All are below 0.2 -> Good
 
 #Joint filtering ====
@@ -96,6 +109,7 @@ metadata %>%
 
 #Two metrics often evaluated together: #UMIs and #Genes
 #Plot #genes vs. #UMIs coloured by mt fraction
+pdf("../plots/UMIandGenes.pdf")
 metadata %>%
   ggplot(aes(x = nCount_RNA, y = nFeature_RNA, color = mitoRatio)) +
   geom_point() +
@@ -107,11 +121,12 @@ metadata %>%
   geom_vline(xintercept = 500) +
   geom_hline(yintercept = 250) +
   facet_wrap(~orig.ident)
-
+dev.off()
 
 # Visualize QC metrics as a violin plot
+pdf("../plots/qc_vln_pre_filter.pdf")
 VlnPlot(seurat_obj, features = c("nFeature_RNA", "nCount_RNA", "mitoRatio"), ncol = 3)
-
+dev.off()
 
 #Filtering ====
 #Cell-level filtering thresholds, based on general guidelines and the source paper (Kazer et al.)
@@ -149,12 +164,14 @@ filtered_counts <- counts[keep_genes, ]
 
 #Filter seurat object
 filtered_seurat <- CreateSeuratObject(filtered_counts, meta.data = filtered_seurat@meta.data)
-filtered_seurat #An object of class Seurat 24386 features across 154343 samples within 1 assay
+print(filtered_seurat) #An object of class Seurat 24386 features across 154343 samples within 1 assay
 
 #Reassess after QC
 
 # Visualize QC metrics as a violin plot
+pdf("../plots/vln_after_filter.pdf")
 VlnPlot(filtered_seurat, features = c("nFeature_RNA", "nCount_RNA", "mitoRatio"), ncol = 3)
+dev.off()
 
 #Remove objects to save space
 rm(counts, nonzero, keep_genes, filtered_counts)
@@ -164,5 +181,3 @@ cat("Cells before:", ncol(seurat_obj), "\n")
 cat("Cells after:", ncol(filtered_seurat), "\n")
 cat("Features before:", 25129, "\n")
 cat("Cells after:", 24386, "\n")
-
-

@@ -20,7 +20,7 @@ seurat_rds #24386 features across 154343 samples
 #Normalization of data and scaling with SCTransform()
 seurat_rds <- SCTransform(seurat_rds, 
                           vars.to.regress = "mitoRatio", 
-                          method = "glmGAMPoi",
+                          method = "glmGamPoi",
                           vst.flavor = "v2",
                           verbose = TRUE)
 
@@ -30,7 +30,7 @@ seurat_rds <- SCTransform(seurat_rds,
 seurat_rds <- RunPCA(seurat_rds, features = VariableFeatures(object = seurat_rds), verbose = FALSE)
 
 #How many PCs to use for clustering with elbow plot
-pdf("plots/elbow_plot.pdf")
+pdf("../plots/elbow_plot.pdf")
 ElbowPlot(seurat_rds)
 dev.off()
 
@@ -39,7 +39,14 @@ dev.off()
 seurat_rds <- FindNeighbors(seurat_rds, dims = 1:30)
 seurat_rds <- FindClusters(seurat_rds, resolution = 0.5)
 seurat_rds <- RunUMAP(seurat_rds, dims = 1:30)
-DimPlot(seurat_rds, reduction = "umap", label = TRUE)
+
+#Save the UMAP
+pdf("../plots/umap_clusters.pdf")
+print(DimPlot(seurat_rds, reduction = "umap", label = TRUE))
+dev.off()
+
+#Save final processed object
+saveRDS(seurat_rds, "../data/seurat_processed.rds")
 
 # ====================== 
 # 

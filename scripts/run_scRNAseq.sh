@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --account=def-itobias
-#SBATCH --time=05:00:00
-#SBATCH --cpus-per-task=8 #8 CPUS for parellization
-#SBATCH --mem=64G
-#SBATCH --job-name=scRA_process
+#SBATCH --time=01:00:00
+#SBATCH --cpus-per-task=8 #2 CPUS for parellization
+#SBATCH --mem=32G
+#SBATCH --job-name=filter_cells
 #SBATCH --output=%x-%j.out #Log file for errors or output
 
 #load modules
-module purge
 module load r-bundle-bioconductor/3.21
 
 #Run my Rscript
+Rscript

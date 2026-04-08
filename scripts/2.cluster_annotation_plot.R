@@ -7,9 +7,9 @@ library(ggplot2)
 library(sctransform)
 library(future)
 
-#Increase memory for Cell object
-options(future.globals.maxSize = 15 * 1024^3)
-plan("multisession", workers = 8)
+#Increase memory for Cell object and no paralellization
+plan("sequential")
+options(future.globals.maxSize = 50 * 1024^3)
 
 #Load RDS object 
 seurat_rds <- readRDS("../data/seurat_filtered.rds")
@@ -20,6 +20,7 @@ seurat_rds #24386 features across 154343 samples
 seurat_rds <- SCTransform(seurat_rds, 
                           vars.to.regress = "mitoRatio",
                           vst.flavor = "v2",
+			  conserve.memory = TRUE,
                           verbose = TRUE)
 
 #Dimensionality reduction by PCA and UMAP embedding

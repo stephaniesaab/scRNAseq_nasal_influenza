@@ -25,7 +25,7 @@ metadata <- seurat_obj@meta.data
 #Visualize the number of cell counts per sample
 #Can get multiple cellular barcodes per hydrogen droplet, depending on protocol
 #Can get a higher number of cell barcodes than cells (also account for dying cells)
-metadata %>% 
+metadata %>%
   ggplot(aes(x = biosample_id, fill = organ_custom))+
   geom_bar() +
   theme_classic() +
@@ -37,7 +37,7 @@ metadata %>%
 
 
 #UMI counts per cell
-metadata %>% 
+metadata %>%
   ggplot(aes(color = biosample_id, x = nCount_RNA, fill = organ_custom))+
   geom_density(alpha = 0.2) +
   scale_x_log10() +
@@ -47,15 +47,15 @@ metadata %>%
 #All are 3000 or above -> good
 
 #Genes detected per cell
-metadata %>% 
-  ggplot(aes(color=orig.ident, x=nFeature_RNA, fill= organ_custom)) + 
-  geom_density(alpha = 0.2) + 
+metadata %>%
+  ggplot(aes(color=orig.ident, x=nFeature_RNA, fill= organ_custom)) +
+  geom_density(alpha = 0.2) +
   theme_classic() +
-  scale_x_log10() + 
+  scale_x_log10() +
   geom_vline(xintercept = 300)
 #Bimodal -> One really high peak for D05OM?
 
-#Complexity 
+#Complexity
 #Ratio of nGenes over nUMI
 #If there are many transcripts and low nGenes then likely captured a low number of genes and sequenced transcripts from those repeatedly, could be a specific cell type or artifact or contamination
 #Expect generally a novelty score above 0.80 for good quality cells
@@ -65,7 +65,7 @@ metadata %>%
 seurat_obj$log10GenesPerUMI <- log10(seurat_obj$nFeature_RNA) / log10(seurat_obj$nCount_RNA)
 metadata$log10GenesPerUMI <- seurat_obj$log10GenesPerUMI
 
-metadata %>% 
+metadata %>%
   ggplot(aes(x = log10GenesPerUMI, color = organ_custom, fill = orig.ident)) +
   geom_density(alpha = 0.2) +
   theme_classic() +
@@ -80,7 +80,7 @@ seurat_obj$mitoRatio <- PercentageFeatureSet(object = seurat_obj, pattern = "^mt
 metadata$mitoRatio <- seurat_obj$mitoRatio / 100
 
 #Plot mtcounts, removed 89 rows becase out of range for log10 scale
-metadata %>% 
+metadata %>%
   ggplot(aes(fill = orig.ident, x = mitoRatio, color = organ_custom)) +
   geom_density(alpha = 0.2) +
   scale_x_log10() +
@@ -96,7 +96,7 @@ metadata %>%
 
 #Two metrics often evaluated together: #UMIs and #Genes
 #Plot #genes vs. #UMIs coloured by mt fraction
-metadata %>% 
+metadata %>%
   ggplot(aes(x = nCount_RNA, y = nFeature_RNA, color = mitoRatio)) +
   geom_point() +
   scale_colour_gradient(low = "gray90", high = "black") +
@@ -122,13 +122,13 @@ VlnPlot(seurat_obj, features = c("nFeature_RNA", "nCount_RNA", "mitoRatio"), nco
 #Filter with Seurat function subset()
 
 #Filter out low quality cells with the thresholds above
-filtered_seurat <- subset(x = seurat_obj, 
+filtered_seurat <- subset(x = seurat_obj,
                           subset = (750 < nCount_RNA &
-                                      nCount_RNA < 10000) & 
+                                      nCount_RNA < 10000) &
                             (nFeature_RNA > 500) &
                             (log10GenesPerUMI > 0.80) &
                             (mitoRatio < 15)) #15%
-filtered_seurat  #25129 features across 154343 samples within 1 assay 
+filtered_seurat  #25129 features across 154343 samples within 1 assay
 seurat_obj #25129 features across 156572 samples within 1 assay
 
 #Gene-level filtering ====
@@ -149,7 +149,7 @@ filtered_counts <- counts[keep_genes, ]
 
 #Filter seurat object
 filtered_seurat <- CreateSeuratObject(filtered_counts, meta.data = filtered_seurat@meta.data)
-filtered_seurat #An object of class Seurat 24386 features across 154343 samples within 1 assay 
+filtered_seurat #An object of class Seurat 24386 features across 154343 samples within 1 assay
 
 #Reassess after QC
 
@@ -159,4 +159,10 @@ VlnPlot(filtered_seurat, features = c("nFeature_RNA", "nCount_RNA", "mitoRatio")
 #Remove objects to save space
 rm(counts, nonzero, keep_genes, filtered_counts)
 # Save using RDS
-saveRDS(filtered_seurat, file = "data/seurat_filtered.rds")
+saveRDS(filtered_seurat, file = "../data/seurat_filtered.rds")
+cat("Cells before:", ncol(seurat_obj), "\n")
+cat("Cells after:", ncol(filtered_seurat), "\n")
+cat("Features before:", 25129, "\n")
+cat("Cells after:", 24386, "\n")
+
+

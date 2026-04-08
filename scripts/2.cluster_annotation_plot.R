@@ -5,7 +5,6 @@ library(dplyr)
 library(Seurat)
 library(ggplot2)
 library(sctransform)
-library(glmGamPoi)
 library(future)
 
 #Increase memory for Cell object
@@ -19,8 +18,7 @@ seurat_rds #24386 features across 154343 samples
 
 #Normalization of data and scaling with SCTransform()
 seurat_rds <- SCTransform(seurat_rds, 
-                          vars.to.regress = "mitoRatio", 
-                          method = "glmGamPoi",
+                          vars.to.regress = "mitoRatio",
                           vst.flavor = "v2",
                           verbose = TRUE)
 

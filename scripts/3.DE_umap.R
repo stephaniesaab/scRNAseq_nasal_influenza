@@ -18,10 +18,33 @@ srt_rds <- RunPCA(srt_rds,
                   seed.use= 42, #Set seed to 42, default
                   )
 
-#Clustering 
-#Find neighbors / Find clusters
-#RunUMAP
+# # Clustering
+srt_rds <- FindNeighbors(srt_rds, dims = 1:16) #Set cutoff as 17 PCs
+srt_rds <- FindClusters(srt_rds, resolution = 0.4) #34 Clusters at resolution 0.5, a bit much
 
+# # UMAP with clusters displayed
+srt_rds <- RunUMAP(srt_rds, dims = 1:16)
+DimPlot(srt_rds, reduction = "umap", label = TRUE)
+
+#Annotating the clusters
+# # find all markers of cluster 1
+# cluster1.markers <- FindMarkers(pbmc, ident.1 = 1)
+# head(cluster1.markers, n = 5)
+# 
+# cluster10.markers <- FindMarkers(pbmc, ident.1 = 10)
+# head(cluster10.markers, n = 5)
+# 
+# # In my run, I found that INPP4B, IL7R, CDC14A, ANK3, CAMK4 were markers for cluster 1
+# VlnPlot(pbmc, features = c("INPP4B", "IL7R", "CDC14A", "ANK3", "CAMK4"))
+# #Genes for 
+# #FeaturePlot() is useful to display the features on our UMAP
+# FeaturePlot(pbmc, features = c("INPP4B", "IL7R", "CDC14A", "ANK3", "CAMK4"))
+# 
+# #Let's check some genes known to be associated with CD4+ T Cells
+# FeaturePlot(pbmc, features = c("CD4", "CD3D", "CD3E", "CD3G", "TRAC", "CD8A"))
+# 
+# # Naive or other T cells?
+# FeaturePlot(pbmc, features = c("LEF1", "CCR7", "SELL", "IL2RA"))
 # ====================== 
 
 # # The scaling phase is also where we would regress out unwanted sources of variation, e.g. cell cycle stage

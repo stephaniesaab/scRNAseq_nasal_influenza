@@ -25,12 +25,11 @@ srt_rds <- FindClusters(srt_rds, resolution = 0.4) #34 Clusters at resolution 0.
 srt_rds <- RunUMAP(srt_rds, dims = 1:16)
 
 
-#Marker Search -> Downsample to 500 cells per cluster 
+#Marker Search
 all_markers <- FindAllMarkers(srt_rds,
                               only.pos = TRUE,
                               min.pct = 0.25,
-                              logfc.threshold = 0.25,
-                              max.cells.per.ident = 1000)
+                              logfc.threshold = 0.25)
 #Save
 write.csv(all_markers, "../data/cluster_markers_res0.4.csv")
 

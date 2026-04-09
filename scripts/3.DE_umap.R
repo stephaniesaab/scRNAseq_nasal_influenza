@@ -11,9 +11,10 @@ library(future)
 srt_rds <- readRDS("../data/seurat_processed.rds")
 
 #Run PCA -> Returns Seurat object with PCA calculation stored in reductions slot
+#Calculate 40 PCs but really only will use 16 based on Elbow plot
 srt_rds <- RunPCA(srt_rds, 
                   assay = "SCT", #Assat PCA is run on is SCTransform
-                  npcs = 16, #As per elbow plot (Bend around 16PCs)
+                  npcs = 40, 
                   verbose = TRUE, #Print the top genes associated with high/low loadings for the PCs
                   seed.use= 42, #Set seed to 42, default
                   )
@@ -21,13 +22,23 @@ srt_rds <- RunPCA(srt_rds,
 # # Clustering
 srt_rds <- FindNeighbors(srt_rds, dims = 1:16) #Set cutoff as 17 PCs
 srt_rds <- FindClusters(srt_rds, resolution = 0.4) #34 Clusters at resolution 0.5, a bit much
+srt_rds <- RunUMAP(srt_rds, dims = 1:16)
+
+
+#Marker Search -> Downsample to 500 cells per cluster 
+all_markers <- FindAllMarkers(srt_rds,
+                              only.pos = TRUE,
+                              min.pct = 0.25,
+                              logfc.threshold = 0.25,
+                              max.cells.per.ident = 1000)
+#Save
+write.csv(all_markers, "../data/cluster_markers_res0.4.csv")
 
 # # UMAP with clusters displayed
-srt_rds <- RunUMAP(srt_rds, dims = 1:16)
 DimPlot(srt_rds, reduction = "umap", label = TRUE)
 
 #Annotating the clusters
-# # find all markers of cluster 1
+# find all markers of cluster 1
 # cluster1.markers <- FindMarkers(pbmc, ident.1 = 1)
 # head(cluster1.markers, n = 5)
 # 

@@ -17,6 +17,7 @@ seurat_rds #24386 features across 154343 samples
 
 
 #Normalization of data and scaling with SCTransform()
+#Normalization of data and scaling with SCTransform() -> Replaces NormalizeData(), FindVariableFeatures(), ScaleData(), calculates Pearson Residuals
 seurat_rds <- SCTransform(seurat_rds,
                           vars.to.regress = "mitoRatio",
                           conserve.memory = TRUE,

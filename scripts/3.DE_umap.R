@@ -10,6 +10,9 @@ library(future)
 #Load data ====
 srt_rds <- readRDS("../data/seurat_processed.rds")
 
+#Set the limit to 100GB (100 * 1024^3 bytes) so R doesn't limit size automatically
+options(future.globals.maxSize = 100 * 1024^3)
+plan("multisession", workers = 4)
 #Run PCA -> Returns Seurat object with PCA calculation stored in reductions slot
 #Calculate 40 PCs but really only will use 16 based on Elbow plot
 srt_rds <- RunPCA(srt_rds, 

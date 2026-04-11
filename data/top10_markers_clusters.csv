@@ -1,271 +1,271 @@
-"","X","p_val","avg_log2FC","pct.1","pct.2","p_val_adj","cluster","gene"
-"1","B830017H08Rik",0,3.21520409638123,0.706,0.109,0,0,"B830017H08Rik"
-"2","Calb2",0,3.07547176519411,0.523,0.064,0,0,"Calb2"
-"3","Nqo1",0,3.00709935745725,0.509,0.135,0,0,"Nqo1"
-"4","Kirrel3",0,2.8938092870309,0.344,0.051,0,0,"Kirrel3"
-"5","Rims3",0,2.83093029524214,0.376,0.057,0,0,"Rims3"
-"6","Dcdc2a",0,2.7658566248329,0.985,0.259,0,0,"Dcdc2a"
-"7","Scgn",0,2.67729061040408,0.404,0.069,0,0,"Scgn"
-"8","Unc13c",0,2.61778327455367,0.603,0.111,0,0,"Unc13c"
-"9","Efna5",0,2.58123106187099,0.592,0.123,0,0,"Efna5"
-"10","Kcnk10",0,2.58022199357848,0.599,0.111,0,0,"Kcnk10"
-"11","Ano21",0,2.36088691644238,0.812,0.183,0,1,"Ano2"
-"12","Gramd1c1",0,2.3096432657649,0.904,0.218,0,1,"Gramd1c"
-"13","Stoml31",0,2.28358181212858,1,0.474,0,1,"Stoml3"
-"14","Gldc1",0,2.274914490719,0.498,0.108,0,1,"Gldc"
-"15","Gm68781",0,2.27261839349264,0.372,0.08,0,1,"Gm6878"
-"16","A730046J19Rik1",0,2.26943030091358,0.75,0.165,0,1,"A730046J19Rik"
-"17","Cnga41",0,2.2677110719645,0.836,0.189,0,1,"Cnga4"
-"18","Cnga21",0,2.25782553328723,0.946,0.231,0,1,"Cnga2"
-"19","Pde4a1",0,2.25300944424502,0.907,0.238,0,1,"Pde4a"
-"20","Ric8b1",0,2.25205280276769,0.969,0.247,0,1,"Ric8b"
-"21","Fcrls",0,9.32945238018995,0.483,0.003,0,2,"Fcrls"
-"22","Ms4a7",0,7.57274620404909,0.909,0.013,0,2,"Ms4a7"
-"23","C1qa",0,7.49535797658702,0.987,0.018,0,2,"C1qa"
-"24","C1qc",0,7.4710143660975,0.98,0.016,0,2,"C1qc"
-"25","Pf4",0,7.35622650326422,0.483,0.006,0,2,"Pf4"
-"26","Trem2",0,7.13310306179258,0.693,0.014,0,2,"Trem2"
-"27","C1qb",0,7.05351157148613,0.986,0.02,0,2,"C1qb"
-"28","Mrc1",0,6.99364454218803,0.544,0.011,0,2,"Mrc1"
-"29","Gpr34",0,6.73922407006119,0.41,0.007,0,2,"Gpr34"
-"30","Ccl12",0,6.70425754634191,0.472,0.008,0,2,"Ccl12"
-"31","Acaa1b",0,6.92477825986763,0.307,0.003,0,3,"Acaa1b"
-"32","Serpinb5",0,6.41871233302765,0.451,0.007,0,3,"Serpinb5"
-"33","Krt15",0,5.68210625223748,0.79,0.028,0,3,"Krt15"
-"34","Defb1",0,5.27001172441013,0.531,0.015,0,3,"Defb1"
-"35","Anxa8",0,5.05777309967094,0.616,0.024,0,3,"Anxa8"
-"36","Ifi202b",0,5.04514107347516,0.28,0.008,0,3,"Ifi202b"
-"37","Sfn",0,4.99641213536138,0.883,0.075,0,3,"Sfn"
-"38","Ccdc3",0,4.9805695340827,0.735,0.037,0,3,"Ccdc3"
-"39","Adh7",0,4.83870019480173,0.844,0.047,0,3,"Adh7"
-"40","F3",0,4.83280225372253,0.919,0.086,0,3,"F3"
-"41","Cd79a",0,9.3462750416127,0.97,0.007,0,4,"Cd79a"
-"42","Iglc1",0,9.20240580366928,0.335,0.003,0,4,"Iglc1"
-"43","Iglc2",0,9.05574744726095,0.617,0.004,0,4,"Iglc2"
-"44","Igkc",0,8.74074098022984,0.906,0.016,0,4,"Igkc"
-"45","Pax5",0,8.72197064303279,0.503,0.003,0,4,"Pax5"
-"46","Ms4a1",0,8.50306353695904,0.635,0.004,0,4,"Ms4a1"
-"47","Fcmr",0,8.48505923419491,0.498,0.003,0,4,"Fcmr"
-"48","Fcer2a",0,8.40765938179219,0.309,0.002,0,4,"Fcer2a"
-"49","Ighd",0,8.33305266202499,0.53,0.005,0,4,"Ighd"
-"50","Cd19",0,8.31264588822966,0.289,0.002,0,4,"Cd19"
-"51","Hectd2os",0,3.07006657871383,0.285,0.038,0,5,"Hectd2os"
-"52","S100a51",0,2.81370264327903,1,0.49,0,5,"S100a5"
-"53","Rgs7",0,2.73213961093898,0.336,0.053,0,5,"Rgs7"
-"54","Kcnmb3",0,2.71656025795322,0.412,0.067,0,5,"Kcnmb3"
-"55","Lrrc3b1",0,2.63900593323163,0.423,0.073,0,5,"Lrrc3b"
-"56","Kirrel22",0,2.62277765286994,0.844,0.171,0,5,"Kirrel2"
-"57","Pcp4l11",0,2.61565532823913,0.987,0.347,0,5,"Pcp4l1"
-"58","Dlg21",0,2.51673856197984,0.651,0.142,0,5,"Dlg2"
-"59","Trim452",0,2.42322430343909,0.61,0.132,0,5,"Trim45"
-"60","5730403I07Rik2",0,2.41864722927691,0.806,0.175,0,5,"5730403I07Rik"
-"61","Col1a1",0,10.5067461434092,0.786,0.02,0,6,"Col1a1"
-"62","Lum",0,10.4347675916699,0.573,0.002,0,6,"Lum"
-"63","Omd",0,10.3087472582007,0.432,0.001,0,6,"Omd"
-"64","Wif1",0,10.1513466709912,0.316,0.001,0,6,"Wif1"
-"65","Col1a2",0,9.98945918831527,0.878,0.024,0,6,"Col1a2"
-"66","Ecrg4",0,9.91407750647226,0.378,0.002,0,6,"Ecrg4"
-"67","Cpxm1",0,9.49854002272929,0.455,0.002,0,6,"Cpxm1"
-"68","Itgbl1",0,9.3665926990656,0.263,0.001,0,6,"Itgbl1"
-"69","Apod",0,9.32872348950788,0.603,0.017,0,6,"Apod"
-"70","Col11a1",0,9.31554062466462,0.535,0.004,0,6,"Col11a1"
-"71","Nhlh1",0,8.40432658931286,0.55,0.002,0,7,"Nhlh1"
-"72","Thsd7b",0,8.06883299285796,0.4,0.002,0,7,"Thsd7b"
-"73","Gng8",0,7.49017344829043,0.78,0.013,0,7,"Gng8"
-"74","Cnpy1",0,7.36600769028251,0.316,0.003,0,7,"Cnpy1"
-"75","Sox11",0,7.35315373021788,0.874,0.045,0,7,"Sox11"
-"76","Nhlh2",0,6.46923280634867,0.532,0.016,0,7,"Nhlh2"
-"77","Stk32a",0,6.2878512536267,0.46,0.014,0,7,"Stk32a"
-"78","Mex3a",0,6.25615414085965,0.542,0.017,0,7,"Mex3a"
-"79","Ooep",0,6.23724684958546,0.292,0.006,0,7,"Ooep"
-"80","Gap43",0,6.20484500060174,0.71,0.04,0,7,"Gap43"
-"81","Cd209a",0,7.39337002286801,0.291,0.003,0,8,"Cd209a"
-"82","Ifi205",0,6.6878331277963,0.386,0.007,0,8,"Ifi205"
-"83","Phf11a",0,5.37268953577022,0.324,0.01,0,8,"Phf11a"
-"84","Tnfsf9",0,5.08971849137768,0.272,0.017,0,8,"Tnfsf9"
-"85","Ms4a4c",0,4.98922044210878,0.639,0.051,0,8,"Ms4a4c"
-"86","Slamf8",0,4.96750556147308,0.315,0.011,0,8,"Slamf8"
-"87","Kmo",0,4.89999996937132,0.261,0.008,0,8,"Kmo"
-"88","Tnip3",0,4.84875210213321,0.39,0.021,0,8,"Tnip3"
-"89","Clec10a",0,4.64978753163056,0.258,0.013,0,8,"Clec10a"
-"90","Cd40",0,4.58378997637334,0.305,0.016,0,8,"Cd40"
-"91","Gpihbp1",0,10.9767039302563,0.39,0.001,0,9,"Gpihbp1"
-"92","Ptprb",0,9.92020767504926,0.894,0.003,0,9,"Ptprb"
-"93","Rbp7",0,9.9004960447082,0.282,0.001,0,9,"Rbp7"
-"94","Sox18",0,9.82366189120956,0.513,0.001,0,9,"Sox18"
-"95","Sox17",0,9.74187493659793,0.419,0.001,0,9,"Sox17"
-"96","Emcn",0,9.73934941449056,0.774,0.003,0,9,"Emcn"
-"97","Cyyr1",0,9.51164530639273,0.659,0.002,0,9,"Cyyr1"
-"98","Tie1",0,9.35606451351447,0.537,0.001,0,9,"Tie1"
-"99","Robo4",0,9.35195634500411,0.373,0.001,0,9,"Robo4"
-"100","Myct1",0,9.31498653044535,0.48,0.001,0,9,"Myct1"
-"101","Gzma",0,10.6285262052478,0.347,0.004,0,10,"Gzma"
-"102","Prf1",0,10.3116510218709,0.311,0.001,0,10,"Prf1"
-"103","Sh2d1a",0,10.028153206248,0.287,0,0,10,"Sh2d1a"
-"104","Cd3g",0,9.861832013528,0.607,0.002,0,10,"Cd3g"
-"105","Cd3e",0,9.82532060921601,0.526,0.001,0,10,"Cd3e"
-"106","Trbc1",0,9.7393385203479,0.484,0.001,0,10,"Trbc1"
-"107","Trbc2",0,9.68410547340518,0.712,0.003,0,10,"Trbc2"
-"108","Fasl",0,9.66615882919167,0.372,0.001,0,10,"Fasl"
-"109","Il2rb",0,9.62585699001209,0.661,0.002,0,10,"Il2rb"
-"110","Klrb1c",0,9.61338678027877,0.277,0.001,0,10,"Klrb1c"
-"111","Dlg22",0,4.4798084143448,0.84,0.142,0,11,"Dlg2"
-"112","S100a52",0,4.24683011452114,1,0.497,0,11,"S100a5"
-"113","Pcp4l13",0,3.64222522005191,0.999,0.355,0,11,"Pcp4l1"
-"114","Nphs1",0,3.47738454722236,0.281,0.035,0,11,"Nphs1"
-"115","Hectd2os1",0,3.45681725116537,0.361,0.039,0,11,"Hectd2os"
-"116","Kirrel23",0,3.1790437891795,0.908,0.178,0,11,"Kirrel2"
-"117","Kcnmb31",0,3.05561292859374,0.485,0.069,0,11,"Kcnmb3"
-"118","Lrrc3b2",0,3.04543238657917,0.502,0.075,0,11,"Lrrc3b"
-"119","Rasgrp4",0,2.96364703484957,0.38,0.051,0,11,"Rasgrp4"
-"120","Rgs71",0,2.95329146764591,0.384,0.055,0,11,"Rgs7"
-"121","Cxcr2",0,7.28154232721003,0.764,0.012,0,12,"Cxcr2"
-"122","Stfa2l1",0,7.21762083893408,0.271,0.003,0,12,"Stfa2l1"
-"123","Clec4d",0,6.46213077921145,0.501,0.017,0,12,"Clec4d"
-"124","Acod1",0,6.41771352283645,0.348,0.012,0,12,"Acod1"
-"125","Il1r2",0,6.3922820193568,0.628,0.021,0,12,"Il1r2"
-"126","Trem1",0,6.30850944023521,0.667,0.022,0,12,"Trem1"
-"127","Csf3r",0,6.28023380020903,0.71,0.033,0,12,"Csf3r"
-"128","H2-Q10",0,6.12639998688589,0.347,0.012,0,12,"H2-Q10"
-"129","Ptgs2",0,5.78149830991688,0.672,0.041,0,12,"Ptgs2"
-"130","Cxcl21",0,5.54866801806226,0.655,0.046,0,12,"Cxcl2"
-"131","AU040972",0,7.96228041954459,0.251,0.004,0,13,"AU040972"
-"132","Bpifa1",0,7.58483074473349,0.33,0.035,0,13,"Bpifa1"
-"133","Reg3g1",0,7.05070681348033,0.839,0.069,0,13,"Reg3g"
-"134","Tff2",0,6.89150585372856,0.303,0.01,0,13,"Tff2"
-"135","Ttc36",0,6.6234804995385,0.281,0.004,0,13,"Ttc36"
-"136","Muc4",0,6.0666321458226,0.515,0.018,0,13,"Muc4"
-"137","Gabrp",0,5.85045538215831,0.58,0.02,0,13,"Gabrp"
-"138","Serpinb11",0,5.74334123530172,0.818,0.041,0,13,"Serpinb11"
-"139","Vtcn1",0,5.74301726349593,0.284,0.006,0,13,"Vtcn1"
-"140","Plet1",0,5.72684337803981,0.283,0.031,0,13,"Plet1"
-"141","Car10",0,7.90825983169309,0.323,0.001,0,14,"Car10"
-"142","Abca4",0,7.26912450854865,0.622,0.007,0,14,"Abca4"
-"143","Nrcam",0,7.1691877212417,0.771,0.014,0,14,"Nrcam"
-"144","Vit",0,6.1233575200451,0.614,0.012,0,14,"Vit"
-"145","Slc47a1",0,6.11506576564226,0.513,0.01,0,14,"Slc47a1"
-"146","Car12",0,5.39325934875278,0.748,0.026,0,14,"Car12"
-"147","Igfbp2",0,5.31080830589618,0.883,0.028,0,14,"Igfbp2"
-"148","Col23a1",0,5.27571056716375,0.589,0.019,0,14,"Col23a1"
-"149","Serpinb1b",0,5.27502458293464,0.263,0.006,0,14,"Serpinb1b"
-"150","Sema3d",0,5.13199476688313,0.574,0.024,0,14,"Sema3d"
-"151","Adgre4",0,5.91240151613904,0.338,0.008,0,15,"Adgre4"
-"152","F10",0,5.7456620137089,0.359,0.007,0,15,"F10"
-"153","F13a1",0,5.71529722154953,0.622,0.02,0,15,"F13a1"
-"154","Treml4",0,5.66631737532048,0.255,0.007,0,15,"Treml4"
-"155","Ear2",0,5.54106285973013,0.341,0.012,0,15,"Ear2"
-"156","Apoc2",0,5.50905268857069,0.507,0.019,0,15,"Apoc2"
-"157","Gm9733",0,5.02132286745728,0.288,0.01,0,15,"Gm9733"
-"158","Ace",0,4.98065391457385,0.334,0.021,0,15,"Ace"
-"159","AI839979",0,4.97779944044339,0.386,0.016,0,15,"AI839979"
-"160","Gpr1411",0,4.8697113222425,0.615,0.026,0,15,"Gpr141"
-"161","Adcy34",0,2.30332430961926,0.972,0.293,0,16,"Adcy3"
-"162","Umodl14",0,2.21390439823532,0.955,0.288,0,16,"Umodl1"
-"163","Mslnl5",0,2.0876164977806,0.621,0.181,0,16,"Mslnl"
-"164","Stom4",0,2.07021596491385,0.995,0.408,0,16,"Stom"
-"165","Ano24",0,2.05374286598218,0.759,0.229,0,16,"Ano2"
-"166","Cnga44",0,2.05291177493003,0.804,0.236,0,16,"Cnga4"
-"167","Cngb14",0,2.03792247468795,0.8,0.238,0,16,"Cngb1"
-"168","Gm429121",0,2.03489976592491,0.256,0.07,0,16,"Gm42912"
-"169","Cidea3",0,2.02701570022253,0.35,0.094,0,16,"Cidea"
-"170","Lrrn14",0,2.02032917949665,0.636,0.197,0,16,"Lrrn1"
-"171","Chil6",0,11.2001546175007,0.856,0.008,0,17,"Chil6"
-"172","5430419D17Rik",0,11.0913363352518,0.441,0.002,0,17,"5430419D17Rik"
-"173","Bpifb4",0,11.0090304920244,0.334,0.008,0,17,"Bpifb4"
-"174","Gpx6",0,10.9860214845488,0.339,0.008,0,17,"Gpx6"
-"175","Vmo1",0,10.476314356772,0.983,0.029,0,17,"Vmo1"
-"176","Slc22a20",0,10.3497152847771,0.315,0.002,0,17,"Slc22a20"
-"177","Slc22a2",0,10.1264494089504,0.253,0.001,0,17,"Slc22a2"
-"178","Rgr",0,9.70969215273264,0.671,0.002,0,17,"Rgr"
-"179","Prss33",0,9.61991474015332,0.766,0.005,0,17,"Prss33"
-"180","Ptgds",0,9.01941205644198,0.299,0.003,0,17,"Ptgds"
-"181","Kl",0,9.27425569511595,0.538,0.001,0,18,"Kl"
-"182","Smbd1",0,9.12464155647015,0.962,0.006,0,18,"Smbd1"
-"183","Coch",0,9.04699431071604,0.974,0.047,0,18,"Coch"
-"184","Clcnka",0,9.01816277901305,0.797,0.003,0,18,"Clcnka"
-"185","Galnt131",0,8.99952744037676,0.942,0.006,0,18,"Galnt13"
-"186","Ascl3",0,8.9340261026915,0.959,0.007,0,18,"Ascl3"
-"187","Moxd1",0,8.8988196384218,0.928,0.007,0,18,"Moxd1"
-"188","Foxi2",0,8.85807236602601,0.483,0.001,0,18,"Foxi2"
-"189","Myh7",0,8.78302297777323,0.269,0.001,0,18,"Myh7"
-"190","Bsnd",0,8.49062931964113,0.473,0.002,0,18,"Bsnd"
-"191","Tac1",0,7.59217798014589,0.533,0.004,0,19,"Tac1"
-"192","Wfdc181",0,6.25847659026252,1,0.092,0,19,"Wfdc18"
-"193","Barx2",0,5.8285180516976,0.574,0.013,0,19,"Barx2"
-"194","Cited4",0,5.56712819355893,0.754,0.026,0,19,"Cited4"
-"195","Bglap3",0,5.29104207385503,0.458,0.02,0,19,"Bglap3"
-"196","Nkd2",0,5.08304353900245,0.305,0.018,0,19,"Nkd2"
-"197","Foxq1",0,5.02114013350478,0.502,0.022,0,19,"Foxq1"
-"198","Tfcp2l11",0,4.91329286604066,0.846,0.053,0,19,"Tfcp2l1"
-"199","Itprid11",0,4.8487635804213,0.513,0.027,0,19,"Itprid1"
-"200","Cxcl172",0,4.80610108046276,0.851,0.048,0,19,"Cxcl17"
-"201","Camp",0,13.3174489161716,0.989,0.01,0,20,"Camp"
-"202","Ngp",0,11.6740107180076,0.993,0.015,0,20,"Ngp"
-"203","4930438A08Rik",0,9.48815907352232,0.274,0,0,20,"4930438A08Rik"
-"204","Fcnb",0,9.17933932681898,0.417,0.003,0,20,"Fcnb"
-"205","Itgb2l",0,8.59155997712086,0.712,0.002,0,20,"Itgb2l"
-"206","Ly6g",0,8.34871146482401,0.741,0.003,0,20,"Ly6g"
-"207","Orm1",0,8.20954404139182,0.327,0.001,0,20,"Orm1"
-"208","Wfdc211",0,8.15978145539528,0.999,0.016,0,20,"Wfdc21"
-"209","Lcn21",0,8.10593056414169,0.986,0.047,0,20,"Lcn2"
-"210","Cebpe",0,7.78247270066475,0.666,0.005,0,20,"Cebpe"
-"211","Map3k7cl",0,11.1753855799508,0.287,0,0,21,"Map3k7cl"
-"212","Higd1b",0,10.4850849394438,0.455,0.001,0,21,"Higd1b"
-"213","Gm13861",0,10.4285380468679,0.287,0,0,21,"Gm13861"
-"214","Pln",0,10.2861127535047,0.443,0.002,0,21,"Pln"
-"215","Myh11",0,10.254955770946,0.817,0.004,0,21,"Myh11"
-"216","Rgs4",0,9.99950846837421,0.507,0.001,0,21,"Rgs4"
-"217","Des",0,9.91404287652747,0.322,0.001,0,21,"Des"
-"218","Slc38a111",0,9.32559137861686,0.337,0.001,0,21,"Slc38a11"
-"219","Gucy1b1",0,8.72414433447343,0.693,0.003,0,21,"Gucy1b1"
-"220","Mustn1",0,8.59991765012182,0.759,0.011,0,21,"Mustn1"
-"221","Muc2",0,9.12102099724855,0.958,0.009,0,22,"Muc2"
-"222","Gldn",0,8.20329806239607,0.859,0.006,0,22,"Gldn"
-"223","Sec14l31",0,8.122724600909,1,0.048,0,22,"Sec14l3"
-"224","Nipal1",0,7.8897602217324,0.602,0.004,0,22,"Nipal1"
-"225","Tex33",0,7.65263696591758,0.784,0.009,0,22,"Tex33"
-"226","Slc5a11",0,7.63777163112003,0.277,0.001,0,22,"Slc5a11"
-"227","Kcnj5",0,7.62083969915483,0.506,0.004,0,22,"Kcnj5"
-"228","Oprk1",0,7.5487446272146,0.38,0.002,0,22,"Oprk1"
-"229","B630019A10Rik",0,7.54488049326638,0.331,0.003,0,22,"B630019A10Rik"
-"230","E330011O21Rik",0,7.24054536232768,0.389,0.003,0,22,"E330011O21Rik"
-"231","Car6",0,12.1861180245283,0.942,0.005,0,23,"Car6"
-"232","Scgb2b27",0,11.6581357904898,0.98,0.007,0,23,"Scgb2b27"
-"233","Scgb1b27",0,11.4226672952178,0.898,0.006,0,23,"Scgb1b27"
-"234","Csn3",0,10.933812355331,0.383,0.001,0,23,"Csn3"
-"235","Fbp1",0,9.13908629036576,0.79,0.007,0,23,"Fbp1"
-"236","Pinlyp",0,9.1023736057641,0.285,0.002,0,23,"Pinlyp"
-"237","Cck1",0,9.03787410648462,0.806,0.009,0,23,"Cck"
-"238","Lmod2",0,8.27533198629784,0.381,0.002,0,23,"Lmod2"
-"239","1500002F19Rik",0,7.6887512071783,0.354,0.003,0,23,"1500002F19Rik"
-"240","Pglyrp14",0,7.10424202428785,0.983,0.119,0,23,"Pglyrp1"
-"241","Bpifb9a",0,14.5058394456955,0.999,0.003,0,24,"Bpifb9a"
-"242","Bpifb9b",0,14.0480319847076,0.997,0.004,0,24,"Bpifb9b"
-"243","Bpifb5",0,13.9035172413714,0.972,0.001,0,24,"Bpifb5"
-"244","Odam",0,13.0663655603914,0.888,0.001,0,24,"Odam"
-"245","2310003L06Rik",0,12.9304152219702,0.991,0.002,0,24,"2310003L06Rik"
-"246","Cabs1",0,11.9497739557188,0.969,0.001,0,24,"Cabs1"
-"247","Sval2",0,11.8752488239344,0.417,0,0,24,"Sval2"
-"248","Esp8",0,11.2685446110002,0.295,0,0,24,"Esp8"
-"249","Smr3a",0,10.9957610087361,0.666,0,0,24,"Smr3a"
-"250","Pip",0,7.67897400136359,0.487,0.006,0,24,"Pip"
-"251","Hmx3",0,9.56244528702575,0.437,0.001,0,25,"Hmx3"
-"252","Il25",0,9.43720769980179,0.543,0.002,0,25,"Il25"
-"253","Trpm5",0,9.38574303468773,0.711,0.002,0,25,"Trpm5"
-"254","Sh2d7",0,9.2552133710191,0.613,0.002,0,25,"Sh2d7"
-"255","Avil",0,9.23619675556623,0.71,0.003,0,25,"Avil"
-"256","Ly6g6f",0,9.21703437828391,0.504,0.001,0,25,"Ly6g6f"
-"257","Chat",0,9.10691803846124,0.316,0.001,0,25,"Chat"
-"258","Gnat3",0,8.93828840610426,0.345,0.001,0,25,"Gnat3"
-"259","Rgs131",0,8.91996678640635,0.736,0.003,0,25,"Rgs13"
-"260","Hmx2",0,8.91661722551697,0.352,0.001,0,25,"Hmx2"
-"261","Car1",0,11.7586349250989,0.256,0.001,0,26,"Car1"
-"262","Ctsg",0,8.72865740326054,0.536,0.005,0,26,"Ctsg"
-"263","Mpo",0,8.62067526077843,0.538,0.003,0,26,"Mpo"
-"264","Prtn3",0,7.79721266501064,0.596,0.018,0,26,"Prtn3"
-"265","Elane",0,7.68286632299587,0.487,0.005,0,26,"Elane"
-"266","Ms4a3",0,7.40292180762117,0.448,0.005,0,26,"Ms4a3"
-"267","Prss57",0,6.47760070092227,0.314,0.005,0,26,"Prss57"
-"268","Bex6",0,5.60802377377772,0.284,0.006,0,26,"Bex6"
-"269","Cdc6",0,5.476608335442,0.321,0.007,0,26,"Cdc6"
-"270","Hist1h1a",0,5.22361730631942,0.536,0.017,0,26,"Hist1h1a"
+,X,p_val,avg_log2FC,pct.1,pct.2,p_val_adj,cluster,gene,Broad_cluster,Cluster,revised_cluster
+1,B830017H08Rik,0,3.215204096,0.706,0.109,0,0,B830017H08Rik,Neuron,Calb2+ OSN,Mature OSN
+2,Calb2,0,3.075471765,0.523,0.064,0,0,Calb2,Neuron,Calb2+ OSN,Mature OSN
+3,Nqo1,0,3.007099357,0.509,0.135,0,0,Nqo1,Neuron,Calb2+ OSN,Mature OSN
+4,Kirrel3,0,2.893809287,0.344,0.051,0,0,Kirrel3,Neuron,Calb2+ OSN,Mature OSN
+5,Rims3,0,2.830930295,0.376,0.057,0,0,Rims3,Neuron,Calb2+ OSN,Mature OSN
+6,Dcdc2a,0,2.765856625,0.985,0.259,0,0,Dcdc2a,Neuron,Calb2+ OSN,Mature OSN
+7,Scgn,0,2.67729061,0.404,0.069,0,0,Scgn,Neuron,Calb2+ OSN,Mature OSN
+8,Unc13c,0,2.617783275,0.603,0.111,0,0,Unc13c,Neuron,Calb2+ OSN,Mature OSN
+9,Efna5,0,2.581231062,0.592,0.123,0,0,Efna5,Neuron,Calb2+ OSN,Mature OSN
+10,Kcnk10,0,2.580221994,0.599,0.111,0,0,Kcnk10,Neuron,Calb2+ OSN,Mature OSN
+11,Ano21,0,2.360886916,0.812,0.183,0,1,Ano2,Neuron,,Mature OSN
+12,Gramd1c1,0,2.309643266,0.904,0.218,0,1,Gramd1c,Immune,,Mature OSN
+13,Stoml31,0,2.283581812,1,0.474,0,1,Stoml3,Neuron,,Mature OSN
+14,Gldc1,0,2.274914491,0.498,0.108,0,1,Gldc,,,Mature OSN
+15,Gm68781,0,2.272618393,0.372,0.08,0,1,Gm6878,,,Mature OSN
+16,A730046J19Rik1,0,2.269430301,0.75,0.165,0,1,A730046J19Rik,,,Mature OSN
+17,Cnga41,0,2.267711072,0.836,0.189,0,1,Cnga4,,,Mature OSN
+18,Cnga21,0,2.257825533,0.946,0.231,0,1,Cnga2,,,Mature OSN
+19,Pde4a1,0,2.253009444,0.907,0.238,0,1,Pde4a,,,Mature OSN
+20,Ric8b1,0,2.252052803,0.969,0.247,0,1,Ric8b,,,Mature OSN
+21,Fcrls,0,9.32945238,0.483,0.003,0,2,Fcrls,Myeloid,Macrophage,MHC-II Hi Macrophage
+22,Ms4a7,0,7.572746204,0.909,0.013,0,2,Ms4a7,Myeloid,Macrophage,MHC-II Hi Macrophage
+23,C1qa,0,7.495357977,0.987,0.018,0,2,C1qa,Myeloid,Macrophage,MHC-II Hi Macrophage
+24,C1qc,0,7.471014366,0.98,0.016,0,2,C1qc,Myeloid,Macrophage,MHC-II Hi Macrophage
+25,Pf4,0,7.356226503,0.483,0.006,0,2,Pf4,Myeloid,Macrophage,MHC-II Hi Macrophage
+26,Trem2,0,7.133103062,0.693,0.014,0,2,Trem2,Myeloid,Macrophage,MHC-II Hi Macrophage
+27,C1qb,0,7.053511571,0.986,0.02,0,2,C1qb,Myeloid,Macrophage,MHC-II Hi Macrophage
+28,Mrc1,0,6.993644542,0.544,0.011,0,2,Mrc1,Myeloid,Macrophage,MHC-II Hi Macrophage
+29,Gpr34,0,6.73922407,0.41,0.007,0,2,Gpr34,Myeloid,Macrophage,MHC-II Hi Macrophage
+30,Ccl12,0,6.704257546,0.472,0.008,0,2,Ccl12,Myeloid,Macrophage,MHC-II Hi Macrophage
+31,Acaa1b,0,6.92477826,0.307,0.003,0,3,Acaa1b,Epithelial,Resting Basal,IFN-Stim Basal
+32,Serpinb5,0,6.418712333,0.451,0.007,0,3,Serpinb5,Epithelial,Resting Basal,IFN-Stim Basal
+33,Krt15,0,5.682106252,0.79,0.028,0,3,Krt15,Epithelial,Resting Basal,IFN-Stim Basal
+34,Defb1,0,5.270011724,0.531,0.015,0,3,Defb1,Epithelial,Resting Basal,IFN-Stim Basal
+35,Anxa8,0,5.0577731,0.616,0.024,0,3,Anxa8,Epithelial,Resting Basal,IFN-Stim Basal
+36,Ifi202b,0,5.045141073,0.28,0.008,0,3,Ifi202b,Epithelial,Resting Basal,IFN-Stim Basal
+37,Sfn,0,4.996412135,0.883,0.075,0,3,Sfn,Epithelial,Resting Basal,IFN-Stim Basal
+38,Ccdc3,0,4.980569534,0.735,0.037,0,3,Ccdc3,Epithelial,Resting Basal,IFN-Stim Basal
+39,Adh7,0,4.838700195,0.844,0.047,0,3,Adh7,Epithelial,Resting Basal,IFN-Stim Basal
+40,F3,0,4.832802254,0.919,0.086,0,3,F3,Epithelial,Resting Basal,IFN-Stim Basal
+41,Cd79a,0,9.346275042,0.97,0.007,0,4,Cd79a,Immune,B cell,B-cell
+42,Iglc1,0,9.202405804,0.335,0.003,0,4,Iglc1,Immune,,B-cell
+43,Iglc2,0,9.055747447,0.617,0.004,0,4,Iglc2,Immune,,B-cell
+44,Igkc,0,8.74074098,0.906,0.016,0,4,Igkc,Immune,,B-cell
+45,Pax5,0,8.721970643,0.503,0.003,0,4,Pax5,Immune,,B-cell
+46,Ms4a1,0,8.503063537,0.635,0.004,0,4,Ms4a1,Immune,,B-cell
+47,Fcmr,0,8.485059234,0.498,0.003,0,4,Fcmr,Immune,,B-cell
+48,Fcer2a,0,8.407659382,0.309,0.002,0,4,Fcer2a,Immune,,B-cell
+49,Ighd,0,8.333052662,0.53,0.005,0,4,Ighd,Immune,,B-cell
+50,Cd19,0,8.312645888,0.289,0.002,0,4,Cd19,Immune,,B-cell
+51,Hectd2os,0,3.070066579,0.285,0.038,0,5,Hectd2os,Neuron,Dlg2+ OSN,Mature OSN
+52,S100a51,0,2.813702643,1,0.49,0,5,S100a5,Neuron,Dlg2+ OSN,Mature OSN
+53,Rgs7,0,2.732139611,0.336,0.053,0,5,Rgs7,Neuron,Dlg2+ OSN,Mature OSN
+54,Kcnmb3,0,2.716560258,0.412,0.067,0,5,Kcnmb3,Neuron,Dlg2+ OSN,Mature OSN
+55,Lrrc3b1,0,2.639005933,0.423,0.073,0,5,Lrrc3b,Neuron,Dlg2+ OSN,Mature OSN
+56,Kirrel22,0,2.622777653,0.844,0.171,0,5,Kirrel2,Neuron,Dlg2+ OSN,Mature OSN
+57,Pcp4l11,0,2.615655328,0.987,0.347,0,5,Pcp4l1,Neuron,Dlg2+ OSN,Mature OSN
+58,Dlg21,0,2.516738562,0.651,0.142,0,5,Dlg2,Neuron,Dlg2+ OSN,Mature OSN
+59,Trim452,0,2.423224303,0.61,0.132,0,5,Trim45,Neuron,Dlg2+ OSN,Mature OSN
+60,5730403I07Rik2,0,2.418647229,0.806,0.175,0,5,5730403I07Rik,Neuron,Dlg2+ OSN,Mature OSN
+61,Col1a1,0,10.50674614,0.786,0.02,0,6,Col1a1,Fibroblast,Fibroblast,Fibroblast
+62,Lum,0,10.43476759,0.573,0.002,0,6,Lum,Fibroblast,Fibroblast,Fibroblast
+63,Omd,0,10.30874726,0.432,0.001,0,6,Omd,Fibroblast,Fibroblast,Fibroblast
+64,Wif1,0,10.15134667,0.316,0.001,0,6,Wif1,Fibroblast,Fibroblast,Fibroblast
+65,Col1a2,0,9.989459188,0.878,0.024,0,6,Col1a2,Fibroblast,Fibroblast,Fibroblast
+66,Ecrg4,0,9.914077506,0.378,0.002,0,6,Ecrg4,Fibroblast,Fibroblast,Fibroblast
+67,Cpxm1,0,9.498540023,0.455,0.002,0,6,Cpxm1,Fibroblast,Fibroblast,Fibroblast
+68,Itgbl1,0,9.366592699,0.263,0.001,0,6,Itgbl1,Fibroblast,Fibroblast,Fibroblast
+69,Apod,0,9.32872349,0.603,0.017,0,6,Apod,Fibroblast,Fibroblast,Fibroblast
+70,Col11a1,0,9.315540625,0.535,0.004,0,6,Col11a1,Fibroblast,Fibroblast,Fibroblast
+71,Nhlh1,0,8.404326589,0.55,0.002,0,7,Nhlh1,Neuron,Neural Progenitor/Differentiating OSN,Neural Progenitor
+72,Thsd7b,0,8.068832993,0.4,0.002,0,7,Thsd7b,Neuron,,Neural Progenitor
+73,Gng8,0,7.490173448,0.78,0.013,0,7,Gng8,Neuron,,Neural Progenitor
+74,Cnpy1,0,7.36600769,0.316,0.003,0,7,Cnpy1,Neuron,,Neural Progenitor
+75,Sox11,0,7.35315373,0.874,0.045,0,7,Sox11,Neuron,,Neural Progenitor
+76,Nhlh2,0,6.469232806,0.532,0.016,0,7,Nhlh2,Neuron,,Neural Progenitor
+77,Stk32a,0,6.287851254,0.46,0.014,0,7,Stk32a,Neuron,,Neural Progenitor
+78,Mex3a,0,6.256154141,0.542,0.017,0,7,Mex3a,Neuron,,Neural Progenitor
+79,Ooep,0,6.23724685,0.292,0.006,0,7,Ooep,Neuron,,Neural Progenitor
+80,Gap43,0,6.204845001,0.71,0.04,0,7,Gap43,Neuron,,Neural Progenitor
+81,Cd209a,0,7.393370023,0.291,0.003,0,8,Cd209a,Immune,,IFN-Stim DC
+82,Ifi205,0,6.687833128,0.386,0.007,0,8,Ifi205,Immune,,IFN-Stim DC
+83,Phf11a,0,5.372689536,0.324,0.01,0,8,Phf11a,Immune,,IFN-Stim DC
+84,Tnfsf9,0,5.089718491,0.272,0.017,0,8,Tnfsf9,Immune,,IFN-Stim DC
+85,Ms4a4c,0,4.989220442,0.639,0.051,0,8,Ms4a4c,Immune,,IFN-Stim DC
+86,Slamf8,0,4.967505561,0.315,0.011,0,8,Slamf8,Immune,,IFN-Stim DC
+87,Kmo,0,4.899999969,0.261,0.008,0,8,Kmo,Immune,,IFN-Stim DC
+88,Tnip3,0,4.848752102,0.39,0.021,0,8,Tnip3,Immune,,IFN-Stim DC
+89,Clec10a,0,4.649787532,0.258,0.013,0,8,Clec10a,Immune,,IFN-Stim DC
+90,Cd40,0,4.583789976,0.305,0.016,0,8,Cd40,Immune,,IFN-Stim DC
+91,Gpihbp1,0,10.97670393,0.39,0.001,0,9,Gpihbp1,Endothelial,,Endothelial
+92,Ptprb,0,9.920207675,0.894,0.003,0,9,Ptprb,Endothelial,,Endothelial
+93,Rbp7,0,9.900496045,0.282,0.001,0,9,Rbp7,Endothelial,,Endothelial
+94,Sox18,0,9.823661891,0.513,0.001,0,9,Sox18,Endothelial,,Endothelial
+95,Sox17,0,9.741874937,0.419,0.001,0,9,Sox17,Endothelial,,Endothelial
+96,Emcn,0,9.739349414,0.774,0.003,0,9,Emcn,Endothelial,,Endothelial
+97,Cyyr1,0,9.511645306,0.659,0.002,0,9,Cyyr1,Endothelial,,Endothelial
+98,Tie1,0,9.356064514,0.537,0.001,0,9,Tie1,Endothelial,,Endothelial
+99,Robo4,0,9.351956345,0.373,0.001,0,9,Robo4,Endothelial,,Endothelial
+100,Myct1,0,9.31498653,0.48,0.001,0,9,Myct1,Endothelial,,Endothelial
+101,Gzma,0,10.62852621,0.347,0.004,0,10,Gzma,T+NK,,T+NK
+102,Prf1,0,10.31165102,0.311,0.001,0,10,Prf1,T+NK,,T+NK
+103,Sh2d1a,0,10.02815321,0.287,0,0,10,Sh2d1a,T+NK,,T+NK
+104,Cd3g,0,9.861832014,0.607,0.002,0,10,Cd3g,T+NK,,T+NK
+105,Cd3e,0,9.825320609,0.526,0.001,0,10,Cd3e,T+NK,,T+NK
+106,Trbc1,0,9.73933852,0.484,0.001,0,10,Trbc1,T+NK,,T+NK
+107,Trbc2,0,9.684105473,0.712,0.003,0,10,Trbc2,T+NK,,T+NK
+108,Fasl,0,9.666158829,0.372,0.001,0,10,Fasl,T+NK,,T+NK
+109,Il2rb,0,9.62585699,0.661,0.002,0,10,Il2rb,T+NK,,T+NK
+110,Klrb1c,0,9.61338678,0.277,0.001,0,10,Klrb1c,T+NK,,T+NK
+111,Dlg22,0,4.479808414,0.84,0.142,0,11,Dlg2,Neuron,Dlg2+ OSN,Dlg2+ OSN
+112,S100a52,0,4.246830115,1,0.497,0,11,S100a5,Neuron,Dlg2+ OSN,Dlg2+ OSN
+113,Pcp4l13,0,3.64222522,0.999,0.355,0,11,Pcp4l1,Neuron,Dlg2+ OSN,Dlg2+ OSN
+114,Nphs1,0,3.477384547,0.281,0.035,0,11,Nphs1,Neuron,Dlg2+ OSN,Dlg2+ OSN
+115,Hectd2os1,0,3.456817251,0.361,0.039,0,11,Hectd2os,Neuron,Dlg2+ OSN,Dlg2+ OSN
+116,Kirrel23,0,3.179043789,0.908,0.178,0,11,Kirrel2,Neuron,Dlg2+ OSN,Dlg2+ OSN
+117,Kcnmb31,0,3.055612929,0.485,0.069,0,11,Kcnmb3,Neuron,Dlg2+ OSN,Dlg2+ OSN
+118,Lrrc3b2,0,3.045432387,0.502,0.075,0,11,Lrrc3b,Neuron,Dlg2+ OSN,Dlg2+ OSN
+119,Rasgrp4,0,2.963647035,0.38,0.051,0,11,Rasgrp4,Neuron,Dlg2+ OSN,Dlg2+ OSN
+120,Rgs71,0,2.953291468,0.384,0.055,0,11,Rgs7,Neuron,Dlg2+ OSN,Dlg2+ OSN
+121,Cxcr2,0,7.281542327,0.764,0.012,0,12,Cxcr2,Granulocyte,MHC-I Hi Mature,MHC-I Hi Mature
+122,Stfa2l1,0,7.217620839,0.271,0.003,0,12,Stfa2l1,Granulocyte,MHC-I Hi Mature,MHC-I Hi Mature
+123,Clec4d,0,6.462130779,0.501,0.017,0,12,Clec4d,Granulocyte,MHC-I Hi Mature,MHC-I Hi Mature
+124,Acod1,0,6.417713523,0.348,0.012,0,12,Acod1,Granulocyte,MHC-I Hi Mature,MHC-I Hi Mature
+125,Il1r2,0,6.392282019,0.628,0.021,0,12,Il1r2,Granulocyte,MHC-I Hi Mature,MHC-I Hi Mature
+126,Trem1,0,6.30850944,0.667,0.022,0,12,Trem1,Granulocyte,MHC-I Hi Mature,MHC-I Hi Mature
+127,Csf3r,0,6.2802338,0.71,0.033,0,12,Csf3r,Granulocyte,MHC-I Hi Mature,MHC-I Hi Mature
+128,H2-Q10,0,6.126399987,0.347,0.012,0,12,H2-Q10,Granulocyte,MHC-I Hi Mature,MHC-I Hi Mature
+129,Ptgs2,0,5.78149831,0.672,0.041,0,12,Ptgs2,Granulocyte,MHC-I Hi Mature,MHC-I Hi Mature
+130,Cxcl21,0,5.548668018,0.655,0.046,0,12,Cxcl2,Granulocyte,MHC-I Hi Mature,MHC-I Hi Mature
+131,AU040972,0,7.96228042,0.251,0.004,0,13,AU040972,Epithelial,Ciliated,Ciliated
+132,Bpifa1,0,7.584830745,0.33,0.035,0,13,Bpifa1,Epithelial,Ciliated,Ciliated
+133,Reg3g1,0,7.050706813,0.839,0.069,0,13,Reg3g,Epithelial,Ciliated,Ciliated
+134,Tff2,0,6.891505854,0.303,0.01,0,13,Tff2,Epithelial,Ciliated,Ciliated
+135,Ttc36,0,6.6234805,0.281,0.004,0,13,Ttc36,Epithelial,Ciliated,Ciliated
+136,Muc4,0,6.066632146,0.515,0.018,0,13,Muc4,Epithelial,Ciliated,Ciliated
+137,Gabrp,0,5.850455382,0.58,0.02,0,13,Gabrp,Epithelial,Ciliated,Ciliated
+138,Serpinb11,0,5.743341235,0.818,0.041,0,13,Serpinb11,Epithelial,Ciliated,Ciliated
+139,Vtcn1,0,5.743017263,0.284,0.006,0,13,Vtcn1,Epithelial,Ciliated,Ciliated
+140,Plet1,0,5.726843378,0.283,0.031,0,13,Plet1,Epithelial,Ciliated,Ciliated
+141,Car10,0,7.908259832,0.323,0.001,0,14,Car10,Epithelial,Igfbp2+Nrcam+ Basal,Igfbp2+Nrcam+ Basal
+142,Abca4,0,7.269124509,0.622,0.007,0,14,Abca4,Epithelial,Igfbp2+Nrcam+ Basal,Igfbp2+Nrcam+ Basal
+143,Nrcam,0,7.169187721,0.771,0.014,0,14,Nrcam,Epithelial,Igfbp2+Nrcam+ Basal,Igfbp2+Nrcam+ Basal
+144,Vit,0,6.12335752,0.614,0.012,0,14,Vit,Epithelial,Igfbp2+Nrcam+ Basal,Igfbp2+Nrcam+ Basal
+145,Slc47a1,0,6.115065766,0.513,0.01,0,14,Slc47a1,Epithelial,Igfbp2+Nrcam+ Basal,Igfbp2+Nrcam+ Basal
+146,Car12,0,5.393259349,0.748,0.026,0,14,Car12,Epithelial,Igfbp2+Nrcam+ Basal,Igfbp2+Nrcam+ Basal
+147,Igfbp2,0,5.310808306,0.883,0.028,0,14,Igfbp2,Epithelial,Igfbp2+Nrcam+ Basal,Igfbp2+Nrcam+ Basal
+148,Col23a1,0,5.275710567,0.589,0.019,0,14,Col23a1,Epithelial,Igfbp2+Nrcam+ Basal,Igfbp2+Nrcam+ Basal
+149,Serpinb1b,0,5.275024583,0.263,0.006,0,14,Serpinb1b,Epithelial,Igfbp2+Nrcam+ Basal,Igfbp2+Nrcam+ Basal
+150,Sema3d,0,5.131994767,0.574,0.024,0,14,Sema3d,Epithelial,Igfbp2+Nrcam+ Basal,Igfbp2+Nrcam+ Basal
+151,Adgre4,0,5.912401516,0.338,0.008,0,15,Adgre4,Myeloid,IFN-Stim Mono,Non-Classical Mono
+152,F10,0,5.745662014,0.359,0.007,0,15,F10,Myeloid,IFN-Stim Mono,Non-Classical Mono
+153,F13a1,0,5.715297222,0.622,0.02,0,15,F13a1,Myeloid,IFN-Stim Mono,Non-Classical Mono
+154,Treml4,0,5.666317375,0.255,0.007,0,15,Treml4,Myeloid,IFN-Stim Mono,Non-Classical Mono
+155,Ear2,0,5.54106286,0.341,0.012,0,15,Ear2,Myeloid,IFN-Stim Mono,Non-Classical Mono
+156,Apoc2,0,5.509052689,0.507,0.019,0,15,Apoc2,Myeloid,IFN-Stim Mono,Non-Classical Mono
+157,Gm9733,0,5.021322867,0.288,0.01,0,15,Gm9733,Myeloid,IFN-Stim Mono,Non-Classical Mono
+158,Ace,0,4.980653915,0.334,0.021,0,15,Ace,Myeloid,IFN-Stim Mono,Non-Classical Mono
+159,AI839979,0,4.97779944,0.386,0.016,0,15,AI839979,Myeloid,IFN-Stim Mono,Non-Classical Mono
+160,Gpr1411,0,4.869711322,0.615,0.026,0,15,Gpr141,Myeloid,IFN-Stim Mono,Non-Classical Mono
+161,Adcy34,0,2.30332431,0.972,0.293,0,16,Adcy3,Neuron,Calb2+ OSN,Mature OSN
+162,Umodl14,0,2.213904398,0.955,0.288,0,16,Umodl1,Neuron,Calb2+ OSN,Mature OSN
+163,Mslnl5,0,2.087616498,0.621,0.181,0,16,Mslnl,Neuron,Calb2+ OSN,Mature OSN
+164,Stom4,0,2.070215965,0.995,0.408,0,16,Stom,Neuron,Calb2+ OSN,Mature OSN
+165,Ano24,0,2.053742866,0.759,0.229,0,16,Ano2,Neuron,Calb2+ OSN,Mature OSN
+166,Cnga44,0,2.052911775,0.804,0.236,0,16,Cnga4,Neuron,Calb2+ OSN,Mature OSN
+167,Cngb14,0,2.037922475,0.8,0.238,0,16,Cngb1,Neuron,Calb2+ OSN,Mature OSN
+168,Gm429121,0,2.034899766,0.256,0.07,0,16,Gm42912,Neuron,Calb2+ OSN,Mature OSN
+169,Cidea3,0,2.0270157,0.35,0.094,0,16,Cidea,Neuron,Calb2+ OSN,Mature OSN
+170,Lrrn14,0,2.020329179,0.636,0.197,0,16,Lrrn1,Neuron,Calb2+ OSN,Mature OSN
+171,Chil6,0,11.20015462,0.856,0.008,0,17,Chil6,Epithelial,Gpx6+Ces1a+ Gob/Sec,Gpx6+Ces1a+ Gob/Sec
+172,5430419D17Rik,0,11.09133634,0.441,0.002,0,17,5430419D17Rik,Epithelial,Gpx6+Ces1a+ Gob/Sec,Gpx6+Ces1a+ Gob/Sec
+173,Bpifb4,0,11.00903049,0.334,0.008,0,17,Bpifb4,Epithelial,Gpx6+Ces1a+ Gob/Sec,Gpx6+Ces1a+ Gob/Sec
+174,Gpx6,0,10.98602148,0.339,0.008,0,17,Gpx6,Epithelial,Gpx6+Ces1a+ Gob/Sec,Gpx6+Ces1a+ Gob/Sec
+175,Vmo1,0,10.47631436,0.983,0.029,0,17,Vmo1,Epithelial,Gpx6+Ces1a+ Gob/Sec,Gpx6+Ces1a+ Gob/Sec
+176,Slc22a20,0,10.34971528,0.315,0.002,0,17,Slc22a20,Epithelial,Gpx6+Ces1a+ Gob/Sec,Gpx6+Ces1a+ Gob/Sec
+177,Slc22a2,0,10.12644941,0.253,0.001,0,17,Slc22a2,Epithelial,Gpx6+Ces1a+ Gob/Sec,Gpx6+Ces1a+ Gob/Sec
+178,Rgr,0,9.709692153,0.671,0.002,0,17,Rgr,Epithelial,Gpx6+Ces1a+ Gob/Sec,Gpx6+Ces1a+ Gob/Sec
+179,Prss33,0,9.61991474,0.766,0.005,0,17,Prss33,Epithelial,Gpx6+Ces1a+ Gob/Sec,Gpx6+Ces1a+ Gob/Sec
+180,Ptgds,0,9.019412056,0.299,0.003,0,17,Ptgds,Epithelial,Gpx6+Ces1a+ Gob/Sec,Gpx6+Ces1a+ Gob/Sec
+181,Kl,0,9.274255695,0.538,0.001,0,18,Kl,Epithelial,Ionocyte,Ionocyte
+182,Smbd1,0,9.124641556,0.962,0.006,0,18,Smbd1,Epithelial,Ionocyte,Ionocyte
+183,Coch,0,9.046994311,0.974,0.047,0,18,Coch,Epithelial,Ionocyte,Ionocyte
+184,Clcnka,0,9.018162779,0.797,0.003,0,18,Clcnka,Epithelial,Ionocyte,Ionocyte
+185,Galnt131,0,8.99952744,0.942,0.006,0,18,Galnt13,Epithelial,Ionocyte,Ionocyte
+186,Ascl3,0,8.934026103,0.959,0.007,0,18,Ascl3,Epithelial,Ionocyte,Ionocyte
+187,Moxd1,0,8.898819638,0.928,0.007,0,18,Moxd1,Epithelial,Ionocyte,Ionocyte
+188,Foxi2,0,8.858072366,0.483,0.001,0,18,Foxi2,Epithelial,Ionocyte,Ionocyte
+189,Myh7,0,8.783022978,0.269,0.001,0,18,Myh7,Epithelial,Ionocyte,Ionocyte
+190,Bsnd,0,8.49062932,0.473,0.002,0,18,Bsnd,Epithelial,Ionocyte,Ionocyte
+191,Tac1,0,7.59217798,0.533,0.004,0,19,Tac1,Epithelial,Serous,Ionocyte
+192,Wfdc181,0,6.25847659,1,0.092,0,19,Wfdc18,Epithelial,Serous,Serous epithelial
+193,Barx2,0,5.828518052,0.574,0.013,0,19,Barx2,Epithelial,Serous,Serous epithelial
+194,Cited4,0,5.567128194,0.754,0.026,0,19,Cited4,Epithelial,Serous,Serous epithelial
+195,Bglap3,0,5.291042074,0.458,0.02,0,19,Bglap3,Epithelial,Serous,Serous epithelial
+196,Nkd2,0,5.083043539,0.305,0.018,0,19,Nkd2,Epithelial,Serous,Serous epithelial
+197,Foxq1,0,5.021140134,0.502,0.022,0,19,Foxq1,Epithelial,Serous,Serous epithelial
+198,Tfcp2l11,0,4.913292866,0.846,0.053,0,19,Tfcp2l1,Epithelial,Serous,Serous epithelial
+199,Itprid11,0,4.84876358,0.513,0.027,0,19,Itprid1,Epithelial,Serous,Serous epithelial
+200,Cxcl172,0,4.80610108,0.851,0.048,0,19,Cxcl17,Epithelial,Serous,Serous epithelial
+201,Camp,0,13.31744892,0.989,0.01,0,20,Camp,Granulocyte,Camp++Lta4h+ Immature,Immature Neutrophil
+202,Ngp,0,11.67401072,0.993,0.015,0,20,Ngp,Granulocyte,Camp++Lta4h+ Immature,Immature Neutrophil
+203,4930438A08Rik,0,9.488159074,0.274,0,0,20,4930438A08Rik,Granulocyte,Camp++Lta4h+ Immature,Immature Neutrophil
+204,Fcnb,0,9.179339327,0.417,0.003,0,20,Fcnb,Granulocyte,Camp++Lta4h+ Immature,Immature Neutrophil
+205,Itgb2l,0,8.591559977,0.712,0.002,0,20,Itgb2l,Granulocyte,Camp++Lta4h+ Immature,Immature Neutrophil
+206,Ly6g,0,8.348711465,0.741,0.003,0,20,Ly6g,Granulocyte,Camp++Lta4h+ Immature,Immature Neutrophil
+207,Orm1,0,8.209544041,0.327,0.001,0,20,Orm1,Granulocyte,Camp++Lta4h+ Immature,Immature Neutrophil
+208,Wfdc211,0,8.159781455,0.999,0.016,0,20,Wfdc21,Granulocyte,Camp++Lta4h+ Immature,Immature Neutrophil
+209,Lcn21,0,8.105930564,0.986,0.047,0,20,Lcn2,Granulocyte,Camp++Lta4h+ Immature,Immature Neutrophil
+210,Cebpe,0,7.782472701,0.666,0.005,0,20,Cebpe,Granulocyte,Camp++Lta4h+ Immature,Immature Neutrophil
+211,Map3k7cl,0,11.17538558,0.287,0,0,21,Map3k7cl,Stromal,Smooth Muscle Cell,Smooth Muscle Cell
+212,Higd1b,0,10.48508494,0.455,0.001,0,21,Higd1b,Stromal,Smooth Muscle Cell,Smooth Muscle Cell
+213,Gm13861,0,10.42853805,0.287,0,0,21,Gm13861,Stromal,Smooth Muscle Cell,Smooth Muscle Cell
+214,Pln,0,10.28611275,0.443,0.002,0,21,Pln,Stromal,Smooth Muscle Cell,Smooth Muscle Cell
+215,Myh11,0,10.25495577,0.817,0.004,0,21,Myh11,Stromal,Smooth Muscle Cell,Smooth Muscle Cell
+216,Rgs4,0,9.999508468,0.507,0.001,0,21,Rgs4,Stromal,Smooth Muscle Cell,Smooth Muscle Cell
+217,Des,0,9.914042877,0.322,0.001,0,21,Des,Stromal,Smooth Muscle Cell,Smooth Muscle Cell
+218,Slc38a111,0,9.325591379,0.337,0.001,0,21,Slc38a11,Stromal,Smooth Muscle Cell,Smooth Muscle Cell
+219,Gucy1b1,0,8.724144334,0.693,0.003,0,21,Gucy1b1,Stromal,Smooth Muscle Cell,Smooth Muscle Cell
+220,Mustn1,0,8.59991765,0.759,0.011,0,21,Mustn1,Stromal,Smooth Muscle Cell,Smooth Muscle Cell
+221,Muc2,0,9.121020997,0.958,0.009,0,22,Muc2,Epithelial,Sustentacular (OE),Sustentacular (OE)
+222,Gldn,0,8.203298062,0.859,0.006,0,22,Gldn,Epithelial,Sustentacular (OE),Sustentacular (OE)
+223,Sec14l31,0,8.122724601,1,0.048,0,22,Sec14l3,Epithelial,Sustentacular (OE),Sustentacular (OE)
+224,Nipal1,0,7.889760222,0.602,0.004,0,22,Nipal1,Epithelial,Sustentacular (OE),Sustentacular (OE)
+225,Tex33,0,7.652636966,0.784,0.009,0,22,Tex33,Epithelial,Sustentacular (OE),Sustentacular (OE)
+226,Slc5a11,0,7.637771631,0.277,0.001,0,22,Slc5a11,Epithelial,Sustentacular (OE),Sustentacular (OE)
+227,Kcnj5,0,7.620839699,0.506,0.004,0,22,Kcnj5,Epithelial,Sustentacular (OE),Sustentacular (OE)
+228,Oprk1,0,7.548744627,0.38,0.002,0,22,Oprk1,Epithelial,Sustentacular (OE),Sustentacular (OE)
+229,B630019A10Rik,0,7.544880493,0.331,0.003,0,22,B630019A10Rik,Epithelial,Sustentacular (OE),Sustentacular (OE)
+230,E330011O21Rik,0,7.240545362,0.389,0.003,0,22,E330011O21Rik,Epithelial,Sustentacular (OE),Sustentacular (OE)
+231,Car6,0,12.18611802,0.942,0.005,0,23,Car6,Epithelial,Scgb-b27+Cck+,Scgb-b27+Cck+
+232,Scgb2b27,0,11.65813579,0.98,0.007,0,23,Scgb2b27,Epithelial,Scgb-b27+Cck+,Scgb-b27+Cck+
+233,Scgb1b27,0,11.4226673,0.898,0.006,0,23,Scgb1b27,Epithelial,Scgb-b27+Cck+,Scgb-b27+Cck+
+234,Csn3,0,10.93381236,0.383,0.001,0,23,Csn3,Epithelial,Scgb-b27+Cck+,Scgb-b27+Cck+
+235,Fbp1,0,9.13908629,0.79,0.007,0,23,Fbp1,Epithelial,Scgb-b27+Cck+,Scgb-b27+Cck+
+236,Pinlyp,0,9.102373606,0.285,0.002,0,23,Pinlyp,Epithelial,Scgb-b27+Cck+,Scgb-b27+Cck+
+237,Cck1,0,9.037874106,0.806,0.009,0,23,Cck,Epithelial,Scgb-b27+Cck+,Scgb-b27+Cck+
+238,Lmod2,0,8.275331986,0.381,0.002,0,23,Lmod2,Epithelial,Scgb-b27+Cck+,Scgb-b27+Cck+
+239,1500002F19Rik,0,7.688751207,0.354,0.003,0,23,1500002F19Rik,Epithelial,Scgb-b27+Cck+,Scgb-b27+Cck+
+240,Pglyrp14,0,7.104242024,0.983,0.119,0,23,Pglyrp1,Epithelial,Scgb-b27+Cck+,Scgb-b27+Cck+
+241,Bpifb9a,0,14.50583945,0.999,0.003,0,24,Bpifb9a,Epithelial,Glandular,Glandular epithelial
+242,Bpifb9b,0,14.04803198,0.997,0.004,0,24,Bpifb9b,Epithelial,Glandular,Glandular epithelial
+243,Bpifb5,0,13.90351724,0.972,0.001,0,24,Bpifb5,Epithelial,Glandular,Glandular epithelial
+244,Odam,0,13.06636556,0.888,0.001,0,24,Odam,Epithelial,Glandular,Glandular epithelial
+245,2310003L06Rik,0,12.93041522,0.991,0.002,0,24,2310003L06Rik,Epithelial,Glandular,Glandular epithelial
+246,Cabs1,0,11.94977396,0.969,0.001,0,24,Cabs1,Epithelial,Glandular,Glandular epithelial
+247,Sval2,0,11.87524882,0.417,0,0,24,Sval2,Epithelial,Glandular,Glandular epithelial
+248,Esp8,0,11.26854461,0.295,0,0,24,Esp8,Epithelial,Glandular,Glandular epithelial
+249,Smr3a,0,10.99576101,0.666,0,0,24,Smr3a,Epithelial,Glandular,Glandular epithelial
+250,Pip,0,7.678974001,0.487,0.006,0,24,Pip,Epithelial,Glandular,Glandular epithelial
+251,Hmx3,0,9.562445287,0.437,0.001,0,25,Hmx3,Epithelial,Nasal Tuft,Nasal Tuft
+252,Il25,0,9.4372077,0.543,0.002,0,25,Il25,Epithelial,Nasal Tuft,Nasal Tuft
+253,Trpm5,0,9.385743035,0.711,0.002,0,25,Trpm5,Epithelial,Nasal Tuft,Nasal Tuft
+254,Sh2d7,0,9.255213371,0.613,0.002,0,25,Sh2d7,Epithelial,Nasal Tuft,Nasal Tuft
+255,Avil,0,9.236196756,0.71,0.003,0,25,Avil,Epithelial,Nasal Tuft,Nasal Tuft
+256,Ly6g6f,0,9.217034378,0.504,0.001,0,25,Ly6g6f,Epithelial,Nasal Tuft,Nasal Tuft
+257,Chat,0,9.106918038,0.316,0.001,0,25,Chat,Epithelial,Nasal Tuft,Nasal Tuft
+258,Gnat3,0,8.938288406,0.345,0.001,0,25,Gnat3,Epithelial,Nasal Tuft,Nasal Tuft
+259,Rgs131,0,8.919966786,0.736,0.003,0,25,Rgs13,Epithelial,Nasal Tuft,Nasal Tuft
+260,Hmx2,0,8.916617226,0.352,0.001,0,25,Hmx2,Epithelial,Nasal Tuft,Nasal Tuft
+261,Car1,0,11.75863493,0.256,0.001,0,26,Car1,Granulocyte,Progenitor,Neutrophil Progenitor
+262,Ctsg,0,8.728657403,0.536,0.005,0,26,Ctsg,Granulocyte,Progenitor,Neutrophil Progenitor
+263,Mpo,0,8.620675261,0.538,0.003,0,26,Mpo,Granulocyte,Progenitor,Neutrophil Progenitor
+264,Prtn3,0,7.797212665,0.596,0.018,0,26,Prtn3,Granulocyte,Progenitor,Neutrophil Progenitor
+265,Elane,0,7.682866323,0.487,0.005,0,26,Elane,Granulocyte,Progenitor,Neutrophil Progenitor
+266,Ms4a3,0,7.402921808,0.448,0.005,0,26,Ms4a3,Granulocyte,Progenitor,Neutrophil Progenitor
+267,Prss57,0,6.477600701,0.314,0.005,0,26,Prss57,Granulocyte,Progenitor,Neutrophil Progenitor
+268,Bex6,0,5.608023774,0.284,0.006,0,26,Bex6,Granulocyte,Progenitor,Neutrophil Progenitor
+269,Cdc6,0,5.476608335,0.321,0.007,0,26,Cdc6,Granulocyte,Progenitor,Neutrophil Progenitor
+270,Hist1h1a,0,5.223617306,0.536,0.017,0,26,Hist1h1a,Granulocyte,Progenitor,Neutrophil Progenitor

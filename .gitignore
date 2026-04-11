@@ -50,6 +50,5 @@ rsconnect/
 
 # Seurat object
 data/*.rds
-data/*.csv
 # Plots
 plots/*.pdf

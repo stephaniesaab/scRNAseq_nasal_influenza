@@ -10,11 +10,11 @@ library(org.Mm.eg.db)
 library(BiocParallel)
 
 #Setup parallelization
-plan("multisession", workers = 16) 
+plan("multisession", workers = 8) 
 options(future.globals.maxSize = 100 * 1024^3) #100GB limit
 
 #Load data
-srt <- readRDS("../data/seurat_auto_anno.rds")
+srt <- readRDS("../data/seurat_cluster0.4.rds")
 
 #Rename clusters with cell types annotated manually
 new_cluster_ids <- c(
@@ -48,7 +48,7 @@ new_cluster_ids <- c(
 )
 
 # Apply and save to metadata
-srt$cell_type <- cell_type_map[as.character(srt$seurat_clusters)]
+srt$cell_type <- new_cluster_ids[as.character(srt$SCT_snn_res.0.4)]
 
 #Filter for groups to compare
 #GSEA and DE of clusters 3 and 8 compared between sample groups: 
@@ -66,12 +66,12 @@ pseudo_srt <- AggregateExpression(srt,
                                   assays = "RNA",
                                   return.seurat = TRUE,
                                   group.by = c("cell_type", "organ_custom", 
-                                               "time", "biosample_id"))
-
+                                               "time", "biosample_id", "mouse_id"))
+ncol(pseudo_srt) #Should have 3x as many columns (3x12)
 #Create comparison ID on pseudobulk object
-pseudo_srt$cell_time_organ <- paste0(pseudo_srt$cell_type, "_", 
-                                     pseudo_srt$dpi, "_", 
-                                     pseudo_srt$organ)
+pseudo_srt$cell_time_organ <- paste0(pseudo_srt$cell_type,
+                                     pseudo_srt$time,
+                                     pseudo_srt$organ_custom, sep = "_")
 Idents(pseudo_srt) <- "cell_time_organ"
 
 #Running differential expression (DE) loop
@@ -80,6 +80,7 @@ Idents(pseudo_srt) <- "cell_time_organ"
 #ct = cell type
 #tp = timepoint
 #org = organ
+#For mouse id naming conventions with paper: RT = RM, ET = OM
 comparisons <- list(
   list(ct="Basal_3", tp="D05", org="RM"),
   list(ct="DC_8",    tp="D05", org="RM"),
@@ -95,12 +96,16 @@ for (item in comparisons) {
   
   if (g1 %in% Idents(pseudo_srt) & g2 %in% Idents(pseudo_srt)) {
     
+    #For output in cluster when running SLURM
+    message(paste(">>> Running DE:", g1, "vs", g2))
     #Run FindMarkers using DESeq2 test
-    bulk_de <- FindMarkers(object = pseudo_srt, 
+    bulk_de <- Seurat::FindMarkers(object = pseudo_srt, 
                            ident.1 = g1, 
                            ident.2 = g2,
-                           test.use = "DESeq2",
-                           slot = "counts") #DESeq2 must use raw counts
+                           logfc.threshold = 0.2, #Default is 0.1, increasing can miss weaker signals but limits tests to genes which show on average x-fold difference between groups of cells
+                           test.use = "DESeq2", #negative binomial distribution
+                           slot = "counts",#DESeq2 must use raw counts,
+                           verbose = TRUE) 
     
     #Save the comparison
     write.csv(bulk_de, paste0("../data/Pseudobulk_DESeq2_", g1, "_vs_Naive.csv"))
@@ -109,16 +114,22 @@ for (item in comparisons) {
     gene_list <- sort(setNames(bulk_de$avg_log2FC, 
                                rownames(bulk_de)), 
                       decreasing = TRUE)
+    
     gsea_res <- gseGO(geneList = gene_list, 
                       OrgDb = org.Mm.eg.db, 
                       keyType = 'SYMBOL', 
-                      ont = "BP")
+                      ont = "BP",
+                      pvalueCutoff = 0.05,
+                      minGSSize = 10)
     
-    if(nrow(as.data.frame(gsea_res)) > 0) {
-      write.csv(as.data.frame(gsea_res), paste0("../data/GSEA_Pseudobulk_", g1, ".csv"))
+    if(!is.null(gsea_res) && nrow(as.data.frame(gsea_res)) > 0) {
+      write.csv(as.data.frame(gsea_res), paste0("../data/GSEA_", g1, ".csv"))
     }
+  } else {
+    message(paste("!!! Skipping:", g1, "or", g2, "not found in data."))
   }
 }
+message(">>> DONE!")
 
 
 # 

@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --account=def-itobias
-#SBATCH --time=12:00:00
+#SBATCH --time=5:00:00
 #SBATCH --cpus-per-task=8 #CPUS for parellization
 #SBATCH --mem=128G
 #SBATCH --job-name=DE_GSEA

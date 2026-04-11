@@ -47,8 +47,9 @@ new_cluster_ids <- c(
   "26" = "Neutrophil Progenitor"
 )
 
-# Apply and save to metadata
-srt$cell_type <- new_cluster_ids[as.character(srt$SCT_snn_res.0.4)]
+#unname() prevents Seurat from looking at the '0', '1', '2' names and trying to match cell barcodes
+#Add new cluster IDs to metadata
+srt$cell_type <- unname(new_cluster_ids[as.character(srt$SCT_snn_res.0.4)])
 
 #Filter for groups to compare
 #GSEA and DE of clusters 3 and 8 compared between sample groups: 
@@ -127,6 +128,6 @@ for (item in comparisons) {
   #   }
   # } else {
   #   message(paste("Skipping:", g1, "or", g2, "not found in data."))
-  # }
+   }
 }
 message(">>> DONE!")

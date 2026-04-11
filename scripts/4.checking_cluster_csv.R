@@ -13,7 +13,7 @@ markers <- read.csv("../data/cluster_markers_res0.4.csv")
 top10_markers <- markers %>% 
   group_by(cluster) %>% #Want to get top markers for each cluster
   filter(p_val_adj < 0.05) %>%  #Get only significant markers
-  slice_max(n = 10, order_by, avg_log2FC) #Get top 10 markers for each cluster
+  slice_max(n = 10, order_by = avg_log2FC) #Get top 10 markers for each cluster
 
 #Print it in the console
 print(top10_markers)
@@ -23,3 +23,5 @@ write.csv(top10_markers, "../data/top10_markers_clusters.csv")
 
 #To open an interactive session in Narval:
 #salloc --time=01:00:00 --ntasks=1 --cpus-per-task=1 --mem=4G --account=def-itobias
+#module load r-bundle-bioconductor/3.21
+#R

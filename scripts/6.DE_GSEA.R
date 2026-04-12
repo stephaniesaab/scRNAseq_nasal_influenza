@@ -9,6 +9,7 @@ library(DESeq2) #For the DE
 library(org.Mm.eg.db)        
 library(BiocParallel)
 
+#DE ==================
 #Setup parallelization
 plan("multisession", workers = 8) 
 options(future.globals.maxSize = 100 * 1024^3) #100GB limit
@@ -50,6 +51,7 @@ new_cluster_ids <- c(
 #unname() prevents Seurat from looking at the '0', '1', '2' names and trying to match cell barcodes
 #Add new cluster IDs to metadata
 srt$cell_type <- unname(new_cluster_ids[as.character(srt$SCT_snn_res.0.4)])
+#saveRDS(srt, file = "../data/seurat_cluster0.4_annotated.rds")
 
 #Filter for groups to compare
 #GSEA and DE of clusters 3 and 8 compared between sample groups: 
@@ -113,9 +115,10 @@ for (item in comparisons) {
    }
 }
 message(">>> DONE!")
-# ====================================
-# GSEA
-library(clusterProfiler)
+
+# GSEA ====================
+#Done on own PC and not SLURM 
+library(clusterProfiler) #Not available on the r-bundle-bioconductor on Narval Cluster
 library(org.Mm.eg.db)
 library(dplyr)
 
@@ -165,3 +168,112 @@ for (file_path in de_files) {
     message(paste("--- No significant pathways found for", base_name))
   }
 }
+
+#Feature plots ====================
+library(patchwork)
+library(Seurat)
+library(dplyr)
+library(ggplot2)
+
+#Load annotated Seurat object (with manually annotated cell clusters)
+srt <- readRDS("../data/seurat_cluster0.4_annotated.rds")
+
+#Define gene lists of interest for each cluster of interest -> Based on top 5 markers
+genes_c8 <- c("Cd209a", "Ifi205", "Phf11a", "Tnfsf9", "Ms4a4c") #Cluster IFN-Stim DC
+genes_c3 <- c("Acaa1b", "Serpinb5", "Krt15", "Defb1", "Anxa8") #Cluster IFN-Stim Basal
+genes_osn <- c("Dlg2", "S100a5", "Rgs7", "Pcp4l1", "Kcnmb3") #Cluster Mature OSN
+
+#Create FeaturePlots
+#'stack = TRUE' -> separate plots
+plot_c8 <- FeaturePlot(srt, features = genes_c8, ncol = 3, pt.size = 0.5) + 
+  plot_annotation(title = "IFN Stimulated DC Markers")
+
+plot_c3 <- FeaturePlot(srt, features = genes_c3, ncol = 3, pt.size = 0.5) + 
+  plot_annotation(title = "IFN Stimulated Basal Markers")
+
+plot_osn <- FeaturePlot(srt, features = genes_osn, ncol = 3, pt.size = 0.5) + 
+  plot_annotation(title = "Mature OSN Markers")
+
+#Save the plots
+ggsave("../plots/FeaturePlot_Cluster8.png", plot_c8, width = 12, height = 8)
+ggsave("../plots/FeaturePlot_Cluster3.png", plot_c3, width = 12, height = 8)
+ggsave("../plots/FeaturePlot_OSNs.png", plot_osn, width = 12, height = 8)
+
+#GSEA Visuals =================
+#Function to make a clean GSEA DotPlot from the 6 CSV
+#Ran on interactive Salloc session (not slurm job) because quick
+plot_my_gsea <- function(csv_path, title_name) {
+  df <- read.csv(csv_path)
+  
+  #Filter for the top 10 upregulated and top 10 downregulated pathways
+  top_up <- df %>% 
+    filter(NES > 0) %>% #NES > 0 = upregulated
+    arrange(p.adjust, desc(NES)) %>% 
+    head(5) #Only want top 5 genes, even if there are ties, for visual clarity
+  
+  top_down <- df %>% 
+    filter(NES < 0) %>% #NES < 0 = downregulated
+    arrange(p.adjust, NES) %>% #most negative first
+    head(5)
+    
+  plot_df <- rbind(top_up, top_down)
+  
+  #Plot
+  p <- ggplot(plot_df, aes(x = NES, 
+                      y = reorder(Description, NES), 
+                      color = NES, #Colour by NES
+                      size = -log10(p.adjust))) + #P-values are all very small
+    geom_point() +
+    scale_color_gradient2(low = "red", mid = "white", high = "blue", midpoint = 0) + #Set colour gradient for NES
+    theme_minimal() +
+    labs(title = title_name, #Given in function
+         y = "Gene Ontology (BP)", #From GSEA function
+         x = "Normalized Enrichment Score (NES)",
+         color = "Enrichment (NES)",
+         size = "-log10(p.adj)") +
+    geom_vline(xintercept = 0, linetype = "dashed") #Separate up and down reg
+  return(p)
+}
+#Colour by p-value
+plot_my_gsea2 <- function(csv_path, title_name) {
+  df <- read.csv(csv_path)
+  
+  #Filter for the top 10 upregulated and top 10 downregulated pathways
+  top_up <- df %>% 
+    filter(NES > 0) %>% #NES > 0 = upregulated
+    arrange(p.adjust, desc(NES)) %>% 
+    head(5) #Only want top 5 genes, even if there are ties, for visual clarity
+  
+  top_down <- df %>% 
+    filter(NES < 0) %>% #NES < 0 = downregulated
+    arrange(p.adjust, NES) %>% #most negative first
+    head(5)
+  
+  plot_df <- rbind(top_up, top_down)
+  
+  #Plot
+  p <- ggplot(plot_df, aes(x = NES, 
+                           y = reorder(Description, NES), 
+                           color = p.adjust, #Colour by p-value
+                           size = setSize)) + #Size by number of genes in data found in GO pathway
+    geom_point() +
+    scale_color_gradient(low = "red", high = "blue") + #Set colour gradient for NES
+    theme_minimal() +
+    labs(title = title_name, #Given in function
+         y = "Gene Ontology (BP)", #From GSEA function
+         x = "Normalized Enrichment Score (NES)",
+         color = "p.adjust",
+         size = "Number of genes") +
+    geom_vline(xintercept = 0, linetype = "dashed") #Separate up and down reg
+  return(p)
+}
+#Key comparisons
+p1 <- plot_my_gsea("../data/GSEA_Standalone_Pseudobulk_DESeq2_IFN-Stim Basal_D05_RM_vs_Naive.csv", "GSEA: IFN-Stim Basal (D05 vs Naive)")
+p2 <- plot_my_gsea("../data/GSEA_Standalone_Pseudobulk_DESeq2_IFN-Stim Basal_D14_RM_vs_Naive.csv", "GSEA: IFN-Stim Basal (D14 vs Naive)")
+p3 <- plot_my_gsea("../data/GSEA_Standalone_Pseudobulk_DESeq2_IFN-Stim DC_D05_RM_vs_Naive.csv", "GSEA: IFN-Stim DC (D05 vs Naive)")
+p4 <- plot_my_gsea2("../data/GSEA_Standalone_Pseudobulk_DESeq2_IFN-Stim DC_D14_RM_vs_Naive.csv", "GSEA: IFN-Stim DC (D14 vs Naive)")
+
+ggsave("../plots/GSEA_DotPlot_Basal3_D05.png", p1, width = 10, height = 7)
+ggsave("../plots/GSEA_DotPlot_Basal3_D14.png", p2, width = 10, height = 7)
+ggsave("../plots/GSEA_DotPlot_DC8_D05.png", p3, width = 10, height = 7)
+ggsave("../plots/GSEA_DotPlot_DC8_D14.png", p4, width = 10, height = 7)

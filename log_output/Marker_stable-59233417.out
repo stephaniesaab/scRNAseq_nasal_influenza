@@ -1,0 +1,209 @@
+Loading required package: SeuratObject
+Loading required package: sp
+
+Attaching package: ‘SeuratObject’
+
+The following objects are masked from ‘package:base’:
+
+    intersect, t
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+>>> Sequential active. Starting Marker Discovery...
+>>> Identifying markers for 27 clusters.
+Calculating cluster 0
+For a (much!) faster implementation of the Wilcoxon Rank Sum Test,
+(default method for FindMarkers) please install the presto package
+--------------------------------------------
+install.packages('devtools')
+devtools::install_github('immunogenomics/presto')
+--------------------------------------------
+After installation of presto, Seurat will automatically use the more 
+efficient implementation (no further action necessary).
+This message will be shown once per session
+Calculating cluster 1
+Calculating cluster 2
+Calculating cluster 3
+Calculating cluster 4
+Calculating cluster 5
+Calculating cluster 6
+Calculating cluster 7
+Calculating cluster 8
+Calculating cluster 9
+Calculating cluster 10
+Calculating cluster 11
+Calculating cluster 12
+Calculating cluster 13
+Calculating cluster 14
+Calculating cluster 15
+Calculating cluster 16
+Calculating cluster 17
+Calculating cluster 18
+Calculating cluster 19
+Calculating cluster 20
+Calculating cluster 21
+Calculating cluster 22
+Calculating cluster 23
+Calculating cluster 24
+Calculating cluster 25
+Calculating cluster 26
+Warning messages:
+1: The `slot` argument of `GetAssayData()` is deprecated as of SeuratObject 5.0.0.
+ℹ Please use the `layer` argument instead.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+2: `PackageCheck()` was deprecated in SeuratObject 5.0.0.
+ℹ Please use `rlang::check_installed()` instead.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+>>> Full marker list saved to ../data/cluster_markers_0.4_FULL.csv
+>>> Top 5 marker list saved to ../data/cluster_markers_0.4_TOP5.csv
+# A tibble: 135 × 7
+# Groups:   cluster [27]
+        p_val avg_log2FC pct.1 pct.2 p_val_adj cluster gene         
+        <dbl>      <dbl> <dbl> <dbl>     <dbl> <fct>   <chr>        
+  1 1.11e-150       3.22 0.706 0.109 2.70e-146 0       B830017H08Rik
+  2 1.10e-119       3.08 0.523 0.064 2.68e-115 0       Calb2        
+  3 2.07e- 96       3.01 0.509 0.135 5.05e- 92 0       Nqo1         
+  4 6.60e- 52       2.89 0.344 0.051 1.61e- 47 0       Kirrel3      
+  5 6.92e- 67       2.83 0.376 0.057 1.69e- 62 0       Rims3        
+  6 1.29e-148       2.36 0.812 0.183 3.16e-144 1       Ano2         
+  7 7.48e-182       2.31 0.904 0.218 1.82e-177 1       Gramd1c      
+  8 4.84e-225       2.28 1     0.474 1.18e-220 1       Stoml3       
+  9 1.94e- 90       2.27 0.498 0.108 4.74e- 86 1       Gldc         
+ 10 1.72e- 54       2.27 0.372 0.08  4.18e- 50 1       Gm6878       
+ 11 5.24e-142       9.33 0.483 0.003 1.28e-137 2       Fcrls        
+ 12 3.96e-318       7.57 0.909 0.013 9.66e-314 2       Ms4a7        
+ 13 0               7.50 0.987 0.018 0         2       C1qa         
+ 14 0               7.47 0.98  0.016 0         2       C1qc         
+ 15 7.12e-139       7.36 0.483 0.006 1.74e-134 2       Pf4          
+ 16 6.74e- 79       6.92 0.307 0.003 1.64e- 74 3       Acaa1b       
+ 17 1.84e-118       6.42 0.451 0.007 4.49e-114 3       Serpinb5     
+ 18 8.75e-244       5.68 0.79  0.028 2.13e-239 3       Krt15        
+ 19 1.10e-139       5.27 0.531 0.015 2.68e-135 3       Defb1        
+ 20 3.94e-171       5.06 0.616 0.024 9.61e-167 3       Anxa8        
+ 21 0               9.35 0.97  0.007 0         4       Cd79a        
+ 22 1.67e- 92       9.20 0.335 0.003 4.07e- 88 4       Iglc1        
+ 23 1.76e-183       9.06 0.617 0.004 4.29e-179 4       Iglc2        
+ 24 1.64e-314       8.74 0.906 0.016 4.01e-310 4       Igkc         
+ 25 1.62e-150       8.72 0.503 0.003 3.95e-146 4       Pax5         
+ 26 7.89e- 54       3.07 0.285 0.038 1.92e- 49 5       Hectd2os     
+ 27 5.59e-274       2.81 1     0.49  1.36e-269 5       S100a5       
+ 28 2.53e- 59       2.73 0.336 0.053 6.18e- 55 5       Rgs7         
+ 29 2.02e- 80       2.72 0.412 0.067 4.93e- 76 5       Kcnmb3       
+ 30 5.55e- 66       2.64 0.423 0.073 1.35e- 61 5       Lrrc3b       
+ 31 1.12e-244      10.5  0.786 0.02  2.73e-240 6       Col1a1       
+ 32 9.56e-171      10.4  0.573 0.002 2.33e-166 6       Lum          
+ 33 6.18e-118      10.3  0.432 0.001 1.51e-113 6       Omd          
+ 34 1.41e- 76      10.2  0.316 0.001 3.43e- 72 6       Wif1         
+ 35 9.01e-294       9.99 0.878 0.024 2.20e-289 6       Col1a2       
+ 36 1.04e-159       8.40 0.55  0.002 2.53e-155 7       Nhlh1        
+ 37 5.81e-108       8.07 0.4   0.002 1.42e-103 7       Thsd7b       
+ 38 1.41e-248       7.49 0.78  0.013 3.45e-244 7       Gng8         
+ 39 1.93e- 79       7.37 0.316 0.003 4.70e- 75 7       Cnpy1        
+ 40 2.43e-298       7.35 0.874 0.045 5.92e-294 7       Sox11        
+ 41 6.89e- 82       7.39 0.291 0.003 1.68e- 77 8       Cd209a       
+ 42 5.57e- 95       6.69 0.386 0.007 1.36e- 90 8       Ifi205       
+ 43 8.74e- 78       5.37 0.324 0.01  2.13e- 73 8       Phf11a       
+ 44 4.18e- 58       5.09 0.272 0.017 1.02e- 53 8       Tnfsf9       
+ 45 4.91e-161       4.99 0.639 0.051 1.20e-156 8       Ms4a4c       
+ 46 7.19e-112      11.0  0.39  0.001 1.75e-107 9       Gpihbp1      
+ 47 9.19e-322       9.92 0.894 0.003 2.24e-317 9       Ptprb        
+ 48 1.20e- 73       9.90 0.282 0.001 2.93e- 69 9       Rbp7         
+ 49 1.62e-146       9.82 0.513 0.001 3.94e-142 9       Sox18        
+ 50 2.29e-112       9.74 0.419 0.001 5.60e-108 9       Sox17        
+ 51 8.84e- 90      10.6  0.347 0.004 2.16e- 85 10      Gzma         
+ 52 1.01e- 79      10.3  0.311 0.001 2.46e- 75 10      Prf1         
+ 53 1.33e- 72      10.0  0.287 0     3.25e- 68 10      Sh2d1a       
+ 54 5.86e-181       9.86 0.607 0.002 1.43e-176 10      Cd3g         
+ 55 2.64e-147       9.83 0.526 0.001 6.45e-143 10      Cd3e         
+ 56 6.44e-220       4.48 0.84  0.142 1.57e-215 11      Dlg2         
+ 57 0               4.25 1     0.497 0         11      S100a5       
+ 58 1.41e-312       3.64 0.999 0.355 3.43e-308 11      Pcp4l1       
+ 59 1.53e- 46       3.48 0.281 0.035 3.73e- 42 11      Nphs1        
+ 60 2.36e- 62       3.46 0.361 0.039 5.75e- 58 11      Hectd2os     
+ 61 1.02e-229       7.28 0.764 0.012 2.48e-225 12      Cxcr2        
+ 62 2.74e- 60       7.22 0.271 0.003 6.69e- 56 12      Stfa2l1      
+ 63 1.39e-122       6.46 0.501 0.017 3.38e-118 12      Clec4d       
+ 64 3.59e- 77       6.42 0.348 0.012 8.75e- 73 12      Acod1        
+ 65 5.67e-171       6.39 0.628 0.021 1.38e-166 12      Il1r2        
+ 66 1.08e- 67       7.96 0.251 0.004 2.65e- 63 13      AU040972     
+ 67 3.66e- 71       7.58 0.33  0.035 8.94e- 67 13      Bpifa1       
+ 68 8.91e-254       7.05 0.839 0.069 2.17e-249 13      Reg3g        
+ 69 2.33e- 74       6.89 0.303 0.01  5.69e- 70 13      Tff2         
+ 70 5.91e- 72       6.62 0.281 0.004 1.44e- 67 13      Ttc36        
+ 71 2.79e- 85       7.91 0.323 0.001 6.80e- 81 14      Car10        
+ 72 4.00e-180       7.27 0.622 0.007 9.75e-176 14      Abca4        
+ 73 1.06e-243       7.17 0.771 0.014 2.57e-239 14      Nrcam        
+ 74 4.16e-174       6.12 0.614 0.012 1.01e-169 14      Vit          
+ 75 3.75e-141       6.12 0.513 0.01  9.15e-137 14      Slc47a1      
+ 76 1.98e- 88       5.91 0.338 0.008 4.82e- 84 15      Adgre4       
+ 77 8.21e- 92       5.75 0.359 0.007 2.00e- 87 15      F10          
+ 78 1.47e-179       5.72 0.622 0.02  3.57e-175 15      F13a1        
+ 79 1.32e- 58       5.67 0.255 0.007 3.23e- 54 15      Treml4       
+ 80 2.21e- 85       5.54 0.341 0.012 5.39e- 81 15      Ear2         
+ 81 6.90e-218       2.30 0.972 0.293 1.68e-213 16      Adcy3        
+ 82 3.18e-205       2.21 0.955 0.288 7.76e-201 16      Umodl1       
+ 83 1.23e- 95       2.09 0.621 0.181 3.01e- 91 16      Mslnl        
+ 84 2.44e-209       2.07 0.995 0.408 5.94e-205 16      Stom         
+ 85 3.21e-128       2.05 0.759 0.229 7.83e-124 16      Ano2         
+ 86 1.74e-294      11.2  0.856 0.008 4.23e-290 17      Chil6        
+ 87 2.86e-117      11.1  0.441 0.002 6.97e-113 17      5430419D17Rik
+ 88 1.13e- 80      11.0  0.334 0.008 2.75e- 76 17      Bpifb4       
+ 89 1.09e- 83      11.0  0.339 0.008 2.65e- 79 17      Gpx6         
+ 90 0              10.5  0.983 0.029 0         17      Vmo1         
+ 91 2.32e-158       9.27 0.538 0.001 5.66e-154 18      Kl           
+ 92 0               9.12 0.962 0.006 0         18      Smbd1        
+ 93 0               9.05 0.974 0.047 0         18      Coch         
+ 94 3.16e-261       9.02 0.797 0.003 7.71e-257 18      Clcnka       
+ 95 0               9.00 0.942 0.006 0         18      Galnt13      
+ 96 1.08e-163       7.59 0.533 0.004 2.63e-159 19      Tac1         
+ 97 0               6.26 1     0.092 0         19      Wfdc18       
+ 98 1.97e-156       5.83 0.574 0.013 4.81e-152 19      Barx2        
+ 99 6.10e-230       5.57 0.754 0.026 1.49e-225 19      Cited4       
+100 7.94e-119       5.29 0.458 0.02  1.94e-114 19      Bglap3       
+101 0              13.3  0.989 0.01  0         20      Camp         
+102 0              11.7  0.993 0.015 0         20      Ngp          
+103 6.46e- 69       9.49 0.274 0     1.58e- 64 20      4930438A08Rik
+104 9.94e-114       9.18 0.417 0.003 2.42e-109 20      Fcnb         
+105 7.81e-234       8.59 0.712 0.002 1.90e-229 20      Itgb2l       
+106 2.28e- 81      11.2  0.287 0     5.57e- 77 21      Map3k7cl     
+107 6.58e-124      10.5  0.455 0.001 1.61e-119 21      Higd1b       
+108 1.02e- 78      10.4  0.287 0     2.48e- 74 21      Gm13861      
+109 2.16e-126      10.3  0.443 0.002 5.27e-122 21      Pln          
+110 1.01e-283      10.3  0.817 0.004 2.45e-279 21      Myh11        
+111 0               9.12 0.958 0.009 0         22      Muc2         
+112 3.06e-299       8.20 0.859 0.006 7.47e-295 22      Gldn         
+113 0               8.12 1     0.048 0         22      Sec14l3      
+114 2.27e-174       7.89 0.602 0.004 5.54e-170 22      Nipal1       
+115 9.40e-261       7.65 0.784 0.009 2.29e-256 22      Tex33        
+116 0              12.2  0.942 0.005 0         23      Car6         
+117 0              11.7  0.98  0.007 0         23      Scgb2b27     
+118 1.19e-314      11.4  0.898 0.006 2.90e-310 23      Scgb1b27     
+119 1.86e-101      10.9  0.383 0.001 4.54e- 97 23      Csn3         
+120 8.30e-266       9.14 0.79  0.007 2.02e-261 23      Fbp1         
+121 0              14.5  0.999 0.003 0         24      Bpifb9a      
+122 0              14.0  0.997 0.004 0         24      Bpifb9b      
+123 0              13.9  0.972 0.001 0         24      Bpifb5       
+124 5.68e-308      13.1  0.888 0.001 1.39e-303 24      Odam         
+125 0              12.9  0.991 0.002 0         24      2310003L06Rik
+126 3.72e-122       9.56 0.437 0.001 9.07e-118 25      Hmx3         
+127 4.65e-160       9.44 0.543 0.002 1.13e-155 25      Il25         
+128 3.73e-228       9.39 0.711 0.002 9.10e-224 25      Trpm5        
+129 3.21e-183       9.26 0.613 0.002 7.82e-179 25      Sh2d7        
+130 4.47e-226       9.24 0.71  0.003 1.09e-221 25      Avil         
+131 1.55e- 61      11.8  0.256 0.001 3.77e- 57 26      Car1         
+132 1.37e-138       8.73 0.536 0.005 3.34e-134 26      Ctsg         
+133 3.64e-142       8.62 0.538 0.003 8.87e-138 26      Mpo          
+134 1.95e-151       7.80 0.596 0.018 4.75e-147 26      Prtn3        
+135 8.44e-125       7.68 0.487 0.005 2.06e-120 26      Elane        
+>>> Job Complete. Ready for manual annotation!

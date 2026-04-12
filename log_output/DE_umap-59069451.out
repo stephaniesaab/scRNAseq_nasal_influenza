@@ -1,0 +1,143 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: SeuratObject
+Loading required package: sp
+
+Attaching package: ‘SeuratObject’
+
+The following objects are masked from ‘package:base’:
+
+    intersect, t
+
+PC_ 1 
+Positive:  Cd74, Apoe, H2-Aa, H2-Ab1, H2-Eb1, C1qa, Lyz2, Il1b, Ccl4, C1qb 
+	   C1qc, Ctss, Cst3, S100a9, S100a8, Tyrobp, Ccl3, Fcer1g, Cxcl2, Ms4a7 
+	   Cd52, Cd14, Srgn, Cx3cr1, B2m, Aif1, Ccl2, Ccl12, Cyba, Fth1 
+Negative:  S100a5, Calm1, Stoml3, Gng13, Omp, Gnal, Chga, Fstl5, Nsg1, Pcp4l1 
+	   Atf5, Gfy, Tuba1a, Nqo1, Map1b, Ckb, Gnb1, Olfm1, Sult1d1, Cyp2a5 
+	   Stom, Cartpt, Tshz2, Rtn1, Dcdc2a, Calm2, Prxl2b, 1700012B09Rik, Serpine2, Plekhb1 
+PC_ 2 
+Positive:  Cd74, Apoe, H2-Aa, H2-Ab1, H2-Eb1, S100a5, C1qa, C1qb, Ccl4, C1qc 
+	   Ctss, Calm1, Cst3, Stoml3, Ms4a7, Gng13, Omp, Igkc, Ccl3, Gnal 
+	   Cx3cr1, Aif1, Chga, Ccl12, Pf4, Ckb, Ccl2, Fstl5, Nsg1, Atf5 
+Negative:  S100a9, S100a8, Lcn2, Ngp, Camp, Wfdc21, Ltf, Retnlg, Chil3, G0s2 
+	   Lyz2, Il1b, Pglyrp1, Ifitm6, Slpi, Mmp8, Cyp2a5, Hp, S100a6, Mmp9 
+	   Anxa1, S100a11, Cxcl2, Wfdc18, Scgb1c1, Cyp2f2, Cyp2g1, Thbs1, Tyrobp, Msrb1 
+PC_ 3 
+Positive:  S100a5, S100a9, S100a8, Stoml3, Calm1, Gng13, Omp, Ngp, Lcn2, Il1b 
+	   Wfdc21, Retnlg, Camp, Gnal, Chga, Fstl5, Nsg1, Gfy, Ckb, Atf5 
+	   Pcp4l1, Olfm1, Gnb1, Stom, Cxcl2, Map1b, Tuba1a, Nqo1, Chil3, Rtn1 
+Negative:  Cyp2a5, Scgb1c1, Wfdc18, Cyp2g1, Cyp2f2, Vmo1, Rgs5, Cbr2, Reg3g, Sec14l3 
+	   Chil6, Agr2, Wfdc2, Cyp1a2, Dcn, Obp1a, Msln, Mgp, Krt18, Sparc 
+	   Krt15, Gstm1, Prdx6, Pon1, Obp1b, Ltf, Sult1c1, Tst, Lypd2, Krt8 
+PC_ 4 
+Positive:  Cyp2a5, Scgb1c1, Cyp2g1, Vmo1, S100a5, Wfdc18, Cd74, Chil6, Cyp2f2, Sec14l3 
+	   Cyp1a2, Agr2, Msln, H2-Aa, H2-Ab1, H2-Eb1, Cbr2, Ltf, Sult1c1, Pon1 
+	   Reg3g, Krt18, Calm1, Stoml3, Wfdc2, Tst, Gstm5, C1qa, Gng13, Krt8 
+Negative:  Sparc, Mgp, Col1a2, Dcn, Apod, Col1a1, Igfbp7, Acta2, Col3a1, Tagln 
+	   Igfbp4, Tpm2, Myl9, Sparcl1, Lum, Bgn, Gsn, Inmt, Aqp1, Plpp3 
+	   Serpinf1, Serping1, Cald1, S100a6, Id3, Gpx3, Timp3, Ogn, Mylk, Vim 
+PC_ 5 
+Positive:  Scgb1c1, Vmo1, Rgs5, Cyp2g1, Apoe, S100a5, Cyp2a5, Chil6, Cyp1a2, Sparc 
+	   Mgp, Col1a2, C1qa, Col1a1, Dcn, C1qb, Apod, Agr2, Msln, Sec14l3 
+	   Acta2, Col3a1, S100a9, S100a8, C1qc, Tagln, Gstm5, Il1b, Sult1c1, Calm1 
+Negative:  Reg3g, Krt15, Ly6d, Igkc, Cyp2f2, Ltf, Gsto1, Cbr2, Obp1a, Wfdc2 
+	   Ccl5, Adh7, Obp1b, Ly6a, F3, Pglyrp1, Aldh3a1, Fxyd3, Krt19, Wfdc18 
+	   Ifi27l2a, Sfn, Cd79a, Gsta4, S100a6, Bpifb9b, AW112010, Lgals3, Isg15, Bpifb9a 
+Warning: Number of dimensions changing from 50 to 40
+Warning message:
+The `slot` argument of `GetAssayData()` is deprecated as of SeuratObject 5.0.0.
+ℹ Please use the `layer` argument instead.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+Computing nearest neighbor graph
+Computing SNN
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 154343
+Number of edges: 4907689
+
+Running Louvain algorithm...
+Maximum modularity in 10 random starts: 0.9654
+Number of communities: 27
+Elapsed time: 54 seconds
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+11:47:35 UMAP embedding parameters a = 0.9922 b = 1.112
+11:47:35 Read 154343 rows and found 16 numeric columns
+11:47:35 Using Annoy for neighbor search, n_neighbors = 30
+11:47:35 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+11:47:48 Writing NN index file to temp file /tmp/RtmpIOsd1o/file126c4b46223b2c
+11:47:48 Searching Annoy index using 4 threads, search_k = 3000
+11:48:06 Annoy recall = 100%
+11:48:10 Commencing smooth kNN distance calibration using 4 threads with target n_neighbors = 30
+11:48:13 Initializing from normalized Laplacian + noise (using RSpectra)
+11:48:47 Commencing optimization for 200 epochs, with 6335736 positive edges
+11:48:47 Using rng type: pcg
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+11:49:49 Optimization finished
+Calculating cluster 0
+For a (much!) faster implementation of the Wilcoxon Rank Sum Test,
+(default method for FindMarkers) please install the presto package
+--------------------------------------------
+install.packages('devtools')
+devtools::install_github('immunogenomics/presto')
+--------------------------------------------
+After installation of presto, Seurat will automatically use the more 
+efficient implementation (no further action necessary).
+This message will be shown once per session
+Calculating cluster 1
+Calculating cluster 2
+Calculating cluster 3
+Calculating cluster 4
+Calculating cluster 5
+Calculating cluster 6
+Calculating cluster 7
+Calculating cluster 8
+Calculating cluster 9
+Calculating cluster 10
+Calculating cluster 11
+Calculating cluster 12
+Calculating cluster 13
+Calculating cluster 14
+Calculating cluster 15
+Calculating cluster 16
+Calculating cluster 17
+Calculating cluster 18
+Calculating cluster 19
+Calculating cluster 20
+Calculating cluster 21
+Calculating cluster 22
+Calculating cluster 23
+Calculating cluster 24
+Calculating cluster 25
+Calculating cluster 26
+Warning message:
+`PackageCheck()` was deprecated in SeuratObject 5.0.0.
+ℹ Please use `rlang::check_installed()` instead.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 
+Rasterizing points since number of points exceeds 100,000.
+To disable this behavior set `raster=FALSE`
+Warning message:
+`aes_string()` was deprecated in ggplot2 3.0.0.
+ℹ Please use tidy evaluation idioms with `aes()`.
+ℹ See also `vignette("ggplot2-in-packages")` for more information.
+ℹ The deprecated feature was likely used in the Seurat package.
+  Please report the issue at <https://github.com/satijalab/seurat/issues>. 

@@ -110,24 +110,58 @@ for (item in comparisons) {
     
     #Save the comparison
     write.csv(bulk_de, paste0("../data/Pseudobulk_DESeq2_", g1, "_vs_Naive.csv"))
-    
-  #   #GSEA (Ranked by log2FoldChange from DESeq2)
-  #   gene_list <- sort(setNames(bulk_de$avg_log2FC, 
-  #                              rownames(bulk_de)), 
-  #                     decreasing = TRUE)
-  #   
-  #   gsea_res <- gseGO(geneList = gene_list, 
-  #                     OrgDb = org.Mm.eg.db, 
-  #                     keyType = 'SYMBOL', 
-  #                     ont = "BP",
-  #                     pvalueCutoff = 0.05,
-  #                     minGSSize = 10)
-  #   
-  #   if(!is.null(gsea_res) && nrow(as.data.frame(gsea_res)) > 0) {
-  #     write.csv(as.data.frame(gsea_res), paste0("../data/GSEA_", g1, ".csv"))
-  #   }
-  # } else {
-  #   message(paste("Skipping:", g1, "or", g2, "not found in data."))
    }
 }
 message(">>> DONE!")
+# ====================================
+# GSEA
+library(clusterProfiler)
+library(org.Mm.eg.db)
+library(dplyr)
+
+#Load DE files from data
+de_files <- list.files(path = "../data/", pattern = "^Pseudobulk", full.names = TRUE)
+
+#GSEA Loop
+for (file_path in de_files) {
+  
+  #Get the name for the output file
+  base_name <- basename(file_path)
+  base_name <- gsub(".csv", "", base_name)
+  message(paste(">>> Processing:", base_name))
+  
+  #Load the DE results using path names
+  res_de <- read.csv(file_path, row.names = 1)
+  
+  #Create the Ranked Gene List
+  #Rank by avg_log2FC (Standard for GSEA)
+  #Remove any NAs
+  res_de <- res_de[!is.na(res_de$avg_log2FC), ]
+  
+  gene_list <- res_de$avg_log2FC
+  names(gene_list) <- rownames(res_de)
+  
+  #Sort descending
+  gene_list <- sort(gene_list, decreasing = TRUE)
+  
+  #GSEA function
+  gsea_res <- gseGO(geneList = gene_list, #Just made
+          OrgDb        = org.Mm.eg.db, #Mouse database
+          keyType      = 'SYMBOL',
+          ont          = "BP", #Biological processes
+          pvalueCutoff = 0.05, #Get significant ones
+          minGSSize    = 10, #minimal size of each geneSet for analyzing (avoid small pathways that may seem stat sig)
+          maxGSSize    = 500, #maximal size of genes annotated for testing, avoid pathways that are too broad (want specifics)
+          pAdjustMethod = "BH",
+          verbose      = FALSE)
+  
+  #Save the Results
+  if (!is.null(gsea_res) && nrow(as.data.frame(gsea_res)) > 0) {
+    write.csv(as.data.frame(gsea_res), 
+              paste0("../data/GSEA_Standalone_", base_name, ".csv"), 
+              row.names = FALSE)
+    message(paste(">>>Saved GSEA for", base_name))
+  } else {
+    message(paste("--- No significant pathways found for", base_name))
+  }
+}

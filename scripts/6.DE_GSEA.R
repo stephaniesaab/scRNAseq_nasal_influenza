@@ -100,7 +100,7 @@ for (item in comparisons) {
   if (g1 %in% Idents(pseudo_srt) & g2 %in% Idents(pseudo_srt)) {
     
     #For output in cluster when running SLURM
-    message(paste(">>> Running DE:", g1, "vs", g2))
+    message(paste("Running DE:", g1, "vs", g2))
     #Run FindMarkers using DESeq2 test
     bulk_de <- Seurat::FindMarkers(object = pseudo_srt, 
                            ident.1 = g1, 
@@ -114,7 +114,7 @@ for (item in comparisons) {
     write.csv(bulk_de, paste0("../data/Pseudobulk_DESeq2_", g1, "_vs_Naive.csv"))
    }
 }
-message(">>> DONE!")
+message("done")
 
 # GSEA ====================
 #Done on own PC and not SLURM 
@@ -131,7 +131,7 @@ for (file_path in de_files) {
   #Get the name for the output file
   base_name <- basename(file_path)
   base_name <- gsub(".csv", "", base_name)
-  message(paste(">>> Processing:", base_name))
+  message(paste("Processing:", base_name))
   
   #Load the DE results using path names
   res_de <- read.csv(file_path, row.names = 1)
@@ -163,9 +163,9 @@ for (file_path in de_files) {
     write.csv(as.data.frame(gsea_res), 
               paste0("../data/GSEA_Standalone_", base_name, ".csv"), 
               row.names = FALSE)
-    message(paste(">>>Saved GSEA for", base_name))
+    message(paste("Saved GSEA for", base_name))
   } else {
-    message(paste("--- No significant pathways found for", base_name))
+    message(paste("No sig", base_name))
   }
 }
 

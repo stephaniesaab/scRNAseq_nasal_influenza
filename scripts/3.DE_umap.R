@@ -27,11 +27,20 @@ srt_rds <- FindNeighbors(srt_rds, dims = 1:16) #Set cutoff as 16 PCs
 srt_rds <- FindClusters(srt_rds, resolution = 0.4) #34 Clusters at resolution 0.5 was a bit much
 srt_rds <- RunUMAP(srt_rds, dims = 1:16)
 
-
 #Marker Search
+Idents(srt_rds) <- "SCT_snn_res.0.4"
 all_markers <- FindAllMarkers(srt_rds,
-                              only.pos = TRUE,
-                              min.pct = 0.25,
-                              logfc.threshold = 0.25)
+                              only.pos = TRUE, #Only care about what's upregulated in the cluster
+                              min.pct = 0.25, #Gene must be in at least 25% of cells
+                              logfc.threshold = 0.25) #Gene must be at least 1.2x higher than other clusters
 #Save
-write.csv(all_markers, "../data/cluster_markers_res0.4.csv")
+write.csv(all_markers, "../data/cluster_markers_res0.4_v2.csv")
+saveRDS(seurat_rds, "../data/seurat_cluster0.4.rds")
+
+#Save the UMAP
+pdf("../plots/umap_clusters.pdf")
+print(DimPlot(seurat_rds, reduction = "umap", label = TRUE))
+dev.off()
+
+#Save final processed object
+saveRDS(seurat_rds, "../data/seurat_processed.rds")

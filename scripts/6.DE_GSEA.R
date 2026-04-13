@@ -116,6 +116,36 @@ for (item in comparisons) {
 }
 message("done")
 
+#Plot DE In heatmap for cluster 8
+de_results <- read.csv("../data/Pseudobulk_DESeq2_IFN-Stim DC_D05_RM_vs_Naive.csv", row.names = 1)
+
+#Get the Top 10 Upregulated Genes
+#Filter by p-val and take the highest fold changes
+top_genes <- de_results %>%
+  filter(p_val_adj < 0.05) %>%
+  arrange(desc(avg_log2FC)) %>%
+  head(10) %>%
+  rownames()
+
+#Subset the cells of interest (the cluster 8)
+cells_to_plot <- subset(srt, idents = "IFN-Stim DC")
+
+#Scale the data for these specific genes
+#Get z scores
+cells_to_plot <- ScaleData(cells_to_plot, features = top_genes)
+
+#Heatmap
+#Group by time to show Naive vs D05 vs D14
+heatmap_plot <- DoHeatmap(cells_to_plot, 
+                          features = top_genes, 
+                          group.by = "time", 
+                          angle = 0, 
+                          size = 4, 
+                          draw.lines = TRUE) +
+                scale_fill_gradient2(low = "blue", mid = "white", high = "red") +
+                theme(axis.text.y = element_text(size = 8))
+
+ggsave("../plots/Heatmap_Cluster8_DE.png", heatmap_plot, width = 8, height = 10, dpi = 300)
 # GSEA ====================
 #Done on own PC and not SLURM 
 library(clusterProfiler) #Not available on the r-bundle-bioconductor on Narval Cluster

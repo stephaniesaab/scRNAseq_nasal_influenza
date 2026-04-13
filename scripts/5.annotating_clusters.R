@@ -41,8 +41,3 @@ write.csv(table_compare, "../data/SingleR_vs_Clusters.csv")
 #Save the Annotated seurat object
 saveRDS(srt_rds, "../data/seurat_auto_anno.rds")
 
-#Plot the automated labels on a UMAP
-png("../plots/SingleR_Automated_UMAP.png", width=10, height=8, units="in", res=300)
-DimPlot(srt_rds, group.by = "SingleR_clean", label = TRUE, repel = TRUE) + 
-  ggtitle("Automated Annotation (SingleR)")
-dev.off()
